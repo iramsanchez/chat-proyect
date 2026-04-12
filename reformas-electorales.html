@@ -848,13 +848,16 @@
         </div>
       </div>
       <div class="timeline-container">
-        <div class="coming-soon">
-          <div class="coming-soon-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h4>Timeline en preparación</h4>
-          <p>Este timeline será publicado próximamente con eventos enriquecidos sobre el contencioso electoral.</p>
+        <div class="timeline-loader" id="loader-tc4">
+          <div class="timeline-loader-icon"></div>
+          Cargando línea de tiempo…
         </div>
+        <iframe
+          src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vT8NyuvKBQj3GAnUNCP91Cx8KfRZ54oAg-2LAxrELWz6yYHh5MXSmbhNeAr1SKEA1ph7eBguShGhVFI&font=Default&lang=en&initial_zoom=2&width=100%25&height=650"
+          onload="hideLoader('loader-tc4')"
+          title="Timeline: Contencioso electoral y medios de impugnación"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
