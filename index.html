@@ -1,1269 +1,1159 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iram Yovan Sánchez Gómez — Perfil Profesional y Publicaciones</title>
-<meta name="description" content="Perfil profesional de Iram Yovan Sánchez Gómez. Especialista en derecho electoral, gestión pública, docencia universitaria y desarrollo tecnológico. Publicaciones en temas político-electorales.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ine-burgundy: #6B1A2A;
-    --ine-gold: #C8A84B;
-    --ine-gold-light: #E8D08A;
-    --ine-gold-dark: #9A7A28;
-    --ine-dark: #1A1A2E;
-    --ine-gray-dark: #2D2D3A;
-    --ine-gray-mid: #5A5A6E;
-    --ine-gray-light: #F0EDE8;
-    --ine-cream: #FAF8F4;
-    --ine-white: #FFFFFF;
-    --shadow-sm: 0 2px 10px rgba(107,26,42,0.08);
-    --shadow-md: 0 8px 28px rgba(107,26,42,0.12);
-    --shadow-lg: 0 12px 48px rgba(107,26,42,0.16);
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iram Yovan Sánchez Gómez — Perfil Profesional y Publicaciones</title>
+  <meta name="description"
+    content="Perfil profesional de Iram Yovan Sánchez Gómez. Especialista en derecho electoral, gestión pública, docencia universitaria y desarrollo tecnológico. Publicaciones en temas político-electorales.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ine-burgundy: #6B1A2A;
+      --ine-gold: #C8A84B;
+      --ine-gold-light: #E8D08A;
+      --ine-gold-dark: #9A7A28;
+      --ine-dark: #1A1A2E;
+      --ine-gray-dark: #2D2D3A;
+      --ine-gray-mid: #5A5A6E;
+      --ine-gray-light: #F0EDE8;
+      --ine-cream: #FAF8F4;
+      --ine-white: #FFFFFF;
+      --shadow-sm: 0 2px 10px rgba(107, 26, 42, 0.08);
+      --shadow-md: 0 8px 28px rgba(107, 26, 42, 0.12);
+      --shadow-lg: 0 12px 48px rgba(107, 26, 42, 0.16);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--ine-cream);
+      color: var(--ine-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--ine-burgundy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--ine-gold) 0%, var(--ine-gold-light) 50%, var(--ine-gold) 100%);
+    }
+
+    .header-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: repeating-linear-gradient(45deg,
+          #fff 0px, #fff 1px,
+          transparent 1px, transparent 20px);
+    }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Source Sans 3', sans-serif;
-    background: var(--ine-cream);
-    color: var(--ine-dark);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  a { color: inherit; }
-
-  /* ===== HEADER ===== */
-  header {
-    background: var(--ine-burgundy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .header-accent {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--ine-gold) 0%, var(--ine-gold-light) 50%, var(--ine-gold) 100%);
-  }
-
-  .header-pattern {
-    position: absolute;
-    inset: 0;
-    opacity: 0.04;
-    background-image: repeating-linear-gradient(
-      45deg,
-      #fff 0px, #fff 1px,
-      transparent 1px, transparent 20px
-    );
-  }
-
-  .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3.8rem 2rem 3rem;
-    display: grid;
-    grid-template-columns: 1fr 290px;
-    gap: 2.5rem;
-    align-items: center;
-    position: relative;
-  }
-
-  .header-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(200,168,75,0.15);
-    border: 1px solid rgba(200,168,75,0.35);
-    border-radius: 2px;
-    padding: 4px 14px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--ine-gold-light);
-    margin-bottom: 1.2rem;
-  }
-
-  .header-badge span {
-    width: 6px; height: 6px;
-    background: var(--ine-gold);
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    color: var(--ine-white);
-    line-height: 1.2;
-    margin-bottom: 0.9rem;
-  }
-
-  header h1 em {
-    font-style: normal;
-    color: var(--ine-gold);
-  }
-
-  header .subtitle {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.75);
-    font-weight: 300;
-    max-width: 640px;
-    line-height: 1.65;
-  }
-
-  .author-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(200,168,75,0.25);
-    border-radius: 4px;
-    padding: 1.4rem 1.5rem;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .author-avatar {
-    width: 56px; height: 56px;
-    border-radius: 50%;
-    background: var(--ine-gold);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--ine-burgundy);
-    margin-bottom: 0.9rem;
-    border: 2px solid rgba(200,168,75,0.4);
-  }
-
-  .author-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--ine-white);
-    line-height: 1.35;
-  }
-
-  .author-role {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.72);
-    font-weight: 300;
-    margin-top: 0.35rem;
-  }
-
-  .author-location {
-    margin-top: 0.9rem;
-    padding-top: 0.9rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.55);
-    font-weight: 300;
-    line-height: 1.55;
-  }
-
-  .author-links {
-    margin-top: 0.9rem;
-    display: flex;
-    gap: 0.6rem;
-  }
-
-  .author-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 12px;
-    border: 1px solid rgba(200,168,75,0.3);
-    border-radius: 2px;
-    background: rgba(200,168,75,0.1);
-    color: var(--ine-gold-light);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background 0.2s, border-color 0.2s;
-  }
-
-  .author-links a:hover {
-    background: rgba(200,168,75,0.2);
-    border-color: rgba(200,168,75,0.5);
-  }
-
-  .author-links a svg {
-    width: 12px; height: 12px;
-    stroke: var(--ine-gold-light);
-    fill: none;
-    stroke-width: 2;
-  }
-
-  /* ===== NAV ===== */
-  nav.blocks-nav {
-    background: var(--ine-dark);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 2px solid var(--ine-burgundy);
-  }
-
-  .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .nav-inner::-webkit-scrollbar { display: none; }
-
-  nav.blocks-nav a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 1rem 1.25rem;
-    font-size: 0.84rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.55);
-    text-decoration: none;
-    white-space: nowrap;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-color 0.2s;
-    margin-bottom: -2px;
-  }
-
-  nav.blocks-nav a:hover,
-  nav.blocks-nav a.active {
-    color: var(--ine-gold);
-    border-bottom-color: var(--ine-gold);
-  }
-
-  .nav-num {
-    font-size: 0.7rem;
-    background: var(--ine-burgundy);
-    color: var(--ine-gold-light);
-    width: 18px; height: 18px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-  }
-
-  /* ===== INTRO STRIP ===== */
-  .intro-strip {
-    background: var(--ine-white);
-    border-bottom: 1px solid rgba(107,26,42,0.1);
-    padding: 1.8rem 2rem;
-  }
-
-  .intro-strip-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .intro-stat {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--ine-burgundy);
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: 0.78rem;
-    color: var(--ine-gray-mid);
-    line-height: 1.3;
-    max-width: 120px;
-  }
-
-  .intro-divider {
-    width: 1px; height: 40px;
-    background: rgba(107,26,42,0.12);
-  }
-
-  .intro-text {
-    flex: 1;
-    min-width: 280px;
-    font-size: 0.93rem;
-    color: var(--ine-gray-mid);
-    border-left: 3px solid var(--ine-gold);
-    padding-left: 1rem;
-  }
-
-  .intro-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 0.9rem;
-    padding: 10px 22px;
-    background: var(--ine-burgundy);
-    color: var(--ine-white);
-    border: none;
-    border-radius: 3px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
-    box-shadow: 0 2px 8px rgba(107,26,42,0.2);
-  }
-
-  .intro-cta:hover {
-    background: #7d2234;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(107,26,42,0.3);
-  }
-
-  .intro-cta svg {
-    width: 16px; height: 16px;
-    stroke: var(--ine-gold-light);
-    fill: none;
-    stroke-width: 2;
-  }
-
-  /* ===== MAIN ===== */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem 5rem;
-  }
-
-  /* ===== BLOQUE ===== */
-  .bloque {
-    margin-bottom: 4rem;
-    scroll-margin-top: 84px;
-  }
-
-  .bloque-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 2px solid var(--ine-gray-light);
-    position: relative;
-  }
-
-  .bloque-header::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; left: 0;
-    width: 84px; height: 2px;
-    background: var(--ine-burgundy);
-  }
-
-  .bloque-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.4rem;
-    font-weight: 700;
-    color: rgba(107,26,42,0.12);
-    line-height: 1;
-    flex-shrink: 0;
-    margin-top: -0.45rem;
-  }
-
-  .bloque-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.55rem;
-    font-weight: 700;
-    color: var(--ine-burgundy);
-    line-height: 1.25;
-    margin-bottom: 0.35rem;
-  }
-
-  .bloque-info p {
-    font-size: 0.92rem;
-    color: var(--ine-gray-mid);
-    font-weight: 300;
-  }
-
-  .bloque-count {
-    margin-left: auto;
-    flex-shrink: 0;
-    background: var(--ine-burgundy);
-    color: var(--ine-gold-light);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 2px;
-    white-space: nowrap;
-  }
-
-  /* ===== PROFILE CARDS ===== */
-  .profile-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .profile-card {
-    background: var(--ine-white);
-    border: 1px solid rgba(107,26,42,0.1);
-    border-radius: 4px;
-    padding: 1.6rem 1.75rem;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-  }
-
-  .profile-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 4px;
-    background: var(--ine-burgundy);
-    border-radius: 4px 0 0 4px;
-  }
-
-  .profile-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-  }
-
-  .profile-card-icon {
-    width: 38px; height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-
-  .profile-card-icon svg {
-    width: 18px; height: 18px;
-    stroke-width: 1.8;
-    fill: none;
-  }
-
-  .profile-card-icon.burgundy {
-    background: rgba(107,26,42,0.08);
-  }
-
-  .profile-card-icon.burgundy svg {
-    stroke: var(--ine-burgundy);
-  }
-
-  .profile-card-icon.gold {
-    background: rgba(200,168,75,0.12);
-  }
-
-  .profile-card-icon.gold svg {
-    stroke: var(--ine-gold-dark);
-  }
-
-  .profile-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--ine-dark);
-    margin-bottom: 0.4rem;
-    line-height: 1.3;
-  }
-
-  .profile-card p {
-    font-size: 0.88rem;
-    color: var(--ine-gray-mid);
-    font-weight: 300;
-    line-height: 1.6;
-  }
-
-  .profile-card .card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 0.9rem;
-  }
-
-  .card-tag {
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 3px 9px;
-    border-radius: 12px;
-    background: var(--ine-gray-light);
-    color: var(--ine-gray-mid);
-    border: 1px solid rgba(107,26,42,0.08);
-  }
-
-  .card-tag.key {
-    background: rgba(107,26,42,0.07);
-    color: var(--ine-burgundy);
-    border-color: rgba(107,26,42,0.18);
-  }
-
-  /* ===== TOPIC LABEL ===== */
-  .topic-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-    padding: 8px 18px;
-    background: var(--ine-dark);
-    border-radius: 3px;
-    color: var(--ine-white);
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
-
-  .topic-label-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--ine-gold);
-    animation: pulse-dot 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse-dot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.8); }
-  }
-
-  /* ===== FEATURED PUB CARD ===== */
-  .pub-featured {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: var(--ine-white);
-    border: 1px solid rgba(107,26,42,0.1);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 1.5rem;
-  }
-
-  .pub-featured:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .pub-featured-banner {
-    position: relative;
-    background: linear-gradient(135deg, var(--ine-burgundy) 0%, #8B2340 40%, var(--ine-dark) 100%);
-    padding: 2rem 2rem 1.8rem;
-    overflow: hidden;
-  }
-
-  .pub-featured-banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.06;
-    background-image: repeating-linear-gradient(
-      45deg,
-      #fff 0px, #fff 1px,
-      transparent 1px, transparent 20px
-    );
-  }
-
-  .pub-featured-banner::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--ine-gold) 0%, var(--ine-gold-light) 50%, var(--ine-gold) 100%);
-  }
-
-  .pub-featured-category {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    background: rgba(200,168,75,0.18);
-    border: 1px solid rgba(200,168,75,0.35);
-    border-radius: 2px;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--ine-gold-light);
-    margin-bottom: 1rem;
-    position: relative;
-  }
-
-  .pub-featured-category span {
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--ine-gold);
-  }
-
-  .pub-featured-banner h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-    font-weight: 700;
-    color: var(--ine-white);
-    line-height: 1.25;
-    margin-bottom: 0.6rem;
-    position: relative;
-  }
-
-  .pub-featured-banner p {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.72);
-    font-weight: 300;
-    line-height: 1.6;
-    max-width: 700px;
-    position: relative;
-  }
-
-  .pub-featured-body {
-    padding: 1.5rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .pub-featured-stats {
-    display: flex;
-    gap: 1.5rem;
-    flex: 1;
-    flex-wrap: wrap;
-  }
-
-  .pub-feat-stat {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .pub-feat-stat-icon {
-    width: 34px; height: 34px;
-    border-radius: 50%;
-    background: rgba(107,26,42,0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .pub-feat-stat-icon svg {
-    width: 16px; height: 16px;
-    stroke: var(--ine-burgundy);
-    fill: none;
-    stroke-width: 1.8;
-  }
-
-  .pub-feat-stat-text {
-    font-size: 0.78rem;
-    color: var(--ine-gray-mid);
-    line-height: 1.3;
-  }
-
-  .pub-feat-stat-text strong {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--ine-burgundy);
-  }
-
-  .pub-featured-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 24px;
-    background: var(--ine-burgundy);
-    color: var(--ine-white);
-    border-radius: 3px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
-    box-shadow: 0 2px 10px rgba(107,26,42,0.2);
-    flex-shrink: 0;
-  }
-
-  .pub-featured:hover .pub-featured-cta {
-    background: #7d2234;
-    transform: translateX(3px);
-    box-shadow: 0 4px 18px rgba(107,26,42,0.3);
-  }
-
-  .pub-featured-cta svg {
-    width: 14px; height: 14px;
-    stroke: var(--ine-gold-light);
-    fill: none;
-    stroke-width: 2;
-    transition: transform 0.2s;
-  }
-
-  .pub-featured:hover .pub-featured-cta svg {
-    transform: translateX(2px);
-  }
-
-  .pub-featured-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 1rem;
-    position: relative;
-  }
-
-  .pub-feat-tag {
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.85);
-    border: 1px solid rgba(255,255,255,0.12);
-  }
-
-  .pub-feat-tag.highlight {
-    background: rgba(200,168,75,0.2);
-    color: var(--ine-gold-light);
-    border-color: rgba(200,168,75,0.3);
-  }
-
-  /* Upcoming topic placeholder */
-  .pub-upcoming {
-    background: var(--ine-white);
-    border: 2px dashed rgba(107,26,42,0.12);
-    border-radius: 6px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .pub-upcoming-icon {
-    width: 52px; height: 52px;
-    border-radius: 50%;
-    background: rgba(200,168,75,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-  }
-
-  .pub-upcoming-icon svg {
-    width: 24px; height: 24px;
-    stroke: var(--ine-gold-dark);
-    fill: none;
-    stroke-width: 1.5;
-  }
-
-  .pub-upcoming h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--ine-dark);
-    margin-bottom: 0.35rem;
-  }
-
-  .pub-upcoming p {
-    font-size: 0.85rem;
-    color: var(--ine-gray-mid);
-    font-weight: 300;
-    max-width: 420px;
-    margin: 0 auto;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--ine-dark);
-    border-top: 3px solid var(--ine-burgundy);
-    padding: 3rem 2rem;
-    position: relative;
-  }
-
-  footer::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--ine-burgundy) 0%, var(--ine-gold) 50%, var(--ine-burgundy) 100%);
-  }
-
-  .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
-
-  .footer-brand h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--ine-white);
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-brand p {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.45);
-    font-weight: 300;
-    line-height: 1.6;
-  }
-
-  .footer-gold-line {
-    width: 40px; height: 2px;
-    background: var(--ine-gold);
-    margin: 1rem 0;
-  }
-
-  .footer-links h4 {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--ine-gold);
-    margin-bottom: 1rem;
-  }
-
-  .footer-links ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-  }
-
-  .footer-links li a {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.52);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-links li a:hover {
-    color: var(--ine-gold-light);
-  }
-
-  .footer-copy {
-    max-width: 1200px;
-    margin: 2rem auto 0;
-    padding-top: 1.4rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.3);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 900px) {
     .header-inner {
-      grid-template-columns: 1fr;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3.8rem 2rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 290px;
+      gap: 2.5rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200, 168, 75, 0.15);
+      border: 1px solid rgba(200, 168, 75, 0.35);
+      border-radius: 2px;
+      padding: 4px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ine-gold-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .header-badge span {
+      width: 6px;
+      height: 6px;
+      background: var(--ine-gold);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--ine-white);
+      line-height: 1.2;
+      margin-bottom: 0.9rem;
+    }
+
+    header h1 em {
+      font-style: normal;
+      color: var(--ine-gold);
+    }
+
+    header .subtitle {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 300;
+      max-width: 640px;
+      line-height: 1.65;
     }
 
     .author-card {
-      max-width: 360px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(200, 168, 75, 0.25);
+      border-radius: 4px;
+      padding: 1.4rem 1.5rem;
+      box-shadow: var(--shadow-sm);
     }
 
-    .profile-grid {
-      grid-template-columns: 1fr;
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--ine-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ine-burgundy);
+      margin-bottom: 0.9rem;
+      border: 2px solid rgba(200, 168, 75, 0.4);
     }
 
-    .footer-inner {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .header-inner,
-    .nav-inner,
-    .intro-strip,
-    main,
-    footer {
-      padding-left: 1rem;
-      padding-right: 1rem;
+    .author-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ine-white);
+      line-height: 1.35;
     }
 
-    .intro-strip-inner {
-      gap: 1.2rem;
+    .author-role {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 300;
+      margin-top: 0.35rem;
     }
 
-    .intro-divider {
+    .author-location {
+      margin-top: 0.9rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 300;
+      line-height: 1.55;
+    }
+
+    .author-links {
+      margin-top: 0.9rem;
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .author-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border: 1px solid rgba(200, 168, 75, 0.3);
+      border-radius: 2px;
+      background: rgba(200, 168, 75, 0.1);
+      color: var(--ine-gold-light);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .author-links a:hover {
+      background: rgba(200, 168, 75, 0.2);
+      border-color: rgba(200, 168, 75, 0.5);
+    }
+
+    .author-links a svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--ine-gold-light);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ===== NAV ===== */
+    nav.blocks-nav {
+      background: var(--ine-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--ine-burgundy);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-inner::-webkit-scrollbar {
       display: none;
     }
 
-    .bloque-header {
+    nav.blocks-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 1rem 1.25rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.55);
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      margin-bottom: -2px;
+    }
+
+    nav.blocks-nav a:hover,
+    nav.blocks-nav a.active {
+      color: var(--ine-gold);
+      border-bottom-color: var(--ine-gold);
+    }
+
+    .nav-num {
+      font-size: 0.7rem;
+      background: var(--ine-burgundy);
+      color: var(--ine-gold-light);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    /* ===== INTRO STRIP ===== */
+    .intro-strip {
+      background: var(--ine-white);
+      border-bottom: 1px solid rgba(107, 26, 42, 0.1);
+      padding: 1.8rem 2rem;
+    }
+
+    .intro-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
       flex-wrap: wrap;
+    }
+
+    .intro-stat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ine-burgundy);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--ine-gray-mid);
+      line-height: 1.3;
+      max-width: 120px;
+    }
+
+    .intro-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(107, 26, 42, 0.12);
+    }
+
+    .intro-text {
+      flex: 1;
+      min-width: 280px;
+      font-size: 0.93rem;
+      color: var(--ine-gray-mid);
+      border-left: 3px solid var(--ine-gold);
+      padding-left: 1rem;
+    }
+
+    .intro-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 0.9rem;
+      padding: 10px 22px;
+      background: var(--ine-burgundy);
+      color: var(--ine-white);
+      border: none;
+      border-radius: 3px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      box-shadow: 0 2px 8px rgba(107, 26, 42, 0.2);
+    }
+
+    .intro-cta:hover {
+      background: #7d2234;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(107, 26, 42, 0.3);
+    }
+
+    .intro-cta svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--ine-gold-light);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ===== MAIN ===== */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ===== BLOQUE ===== */
+    .bloque {
+      margin-bottom: 4rem;
+      scroll-margin-top: 84px;
+    }
+
+    .bloque-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid var(--ine-gray-light);
+      position: relative;
+    }
+
+    .bloque-header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 84px;
+      height: 2px;
+      background: var(--ine-burgundy);
+    }
+
+    .bloque-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: rgba(107, 26, 42, 0.12);
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: -0.45rem;
+    }
+
+    .bloque-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--ine-burgundy);
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+    }
+
+    .bloque-info p {
+      font-size: 0.92rem;
+      color: var(--ine-gray-mid);
+      font-weight: 300;
     }
 
     .bloque-count {
-      margin-left: 0;
+      margin-left: auto;
+      flex-shrink: 0;
+      background: var(--ine-burgundy);
+      color: var(--ine-gold-light);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    /* ===== PROFILE CARDS ===== */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .profile-card {
+      background: var(--ine-white);
+      border: 1px solid rgba(107, 26, 42, 0.1);
+      border-radius: 4px;
+      padding: 1.6rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--ine-burgundy);
+      border-radius: 4px 0 0 4px;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .profile-card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .profile-card-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    .profile-card-icon.burgundy {
+      background: rgba(107, 26, 42, 0.08);
+    }
+
+    .profile-card-icon.burgundy svg {
+      stroke: var(--ine-burgundy);
+    }
+
+    .profile-card-icon.gold {
+      background: rgba(200, 168, 75, 0.12);
+    }
+
+    .profile-card-icon.gold svg {
+      stroke: var(--ine-gold-dark);
+    }
+
+    .profile-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ine-dark);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .profile-card p {
+      font-size: 0.88rem;
+      color: var(--ine-gray-mid);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .profile-card .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 0.9rem;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 12px;
+      background: var(--ine-gray-light);
+      color: var(--ine-gray-mid);
+      border: 1px solid rgba(107, 26, 42, 0.08);
+    }
+
+    .card-tag.key {
+      background: rgba(107, 26, 42, 0.07);
+      color: var(--ine-burgundy);
+      border-color: rgba(107, 26, 42, 0.18);
+    }
+
+    /* ===== TOPIC LABEL ===== */
+    .topic-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+      padding: 8px 18px;
+      background: var(--ine-dark);
+      border-radius: 3px;
+      color: var(--ine-white);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .topic-label-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--ine-gold);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+    }
+
+    /* ===== FEATURED PUB CARD ===== */
+    .pub-featured {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--ine-white);
+      border: 1px solid rgba(107, 26, 42, 0.1);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 1.5rem;
+    }
+
+    .pub-featured:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pub-featured-banner {
+      position: relative;
+      background: linear-gradient(135deg, var(--ine-burgundy) 0%, #8B2340 40%, var(--ine-dark) 100%);
+      padding: 2rem 2rem 1.8rem;
+      overflow: hidden;
+    }
+
+    .pub-featured-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: repeating-linear-gradient(45deg,
+          #fff 0px, #fff 1px,
+          transparent 1px, transparent 20px);
+    }
+
+    .pub-featured-banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--ine-gold) 0%, var(--ine-gold-light) 50%, var(--ine-gold) 100%);
+    }
+
+    .pub-featured-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: rgba(200, 168, 75, 0.18);
+      border: 1px solid rgba(200, 168, 75, 0.35);
+      border-radius: 2px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ine-gold-light);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .pub-featured-category span {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--ine-gold);
+    }
+
+    .pub-featured-banner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      font-weight: 700;
+      color: var(--ine-white);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+      position: relative;
+    }
+
+    .pub-featured-banner p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 700px;
+      position: relative;
+    }
+
+    .pub-featured-body {
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .pub-featured-stats {
+      display: flex;
+      gap: 1.5rem;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    .pub-feat-stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pub-feat-stat-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(107, 26, 42, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pub-feat-stat-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--ine-burgundy);
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .pub-feat-stat-text {
+      font-size: 0.78rem;
+      color: var(--ine-gray-mid);
+      line-height: 1.3;
+    }
+
+    .pub-feat-stat-text strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ine-burgundy);
+    }
+
+    .pub-featured-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: var(--ine-burgundy);
+      color: var(--ine-white);
+      border-radius: 3px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      box-shadow: 0 2px 10px rgba(107, 26, 42, 0.2);
+      flex-shrink: 0;
+    }
+
+    .pub-featured:hover .pub-featured-cta {
+      background: #7d2234;
+      transform: translateX(3px);
+      box-shadow: 0 4px 18px rgba(107, 26, 42, 0.3);
+    }
+
+    .pub-featured-cta svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--ine-gold-light);
+      fill: none;
+      stroke-width: 2;
+      transition: transform 0.2s;
+    }
+
+    .pub-featured:hover .pub-featured-cta svg {
+      transform: translateX(2px);
+    }
+
+    .pub-featured-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1rem;
+      position: relative;
+    }
+
+    .pub-feat-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .pub-feat-tag.highlight {
+      background: rgba(200, 168, 75, 0.2);
+      color: var(--ine-gold-light);
+      border-color: rgba(200, 168, 75, 0.3);
+    }
+
+    /* Upcoming topic placeholder */
+    .pub-upcoming {
+      background: var(--ine-white);
+      border: 2px dashed rgba(107, 26, 42, 0.12);
+      border-radius: 6px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .pub-upcoming-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(200, 168, 75, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .pub-upcoming-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--ine-gold-dark);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .pub-upcoming h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ine-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .pub-upcoming p {
+      font-size: 0.85rem;
+      color: var(--ine-gray-mid);
+      font-weight: 300;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--ine-dark);
+      border-top: 3px solid var(--ine-burgundy);
+      padding: 3rem 2rem;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--ine-burgundy) 0%, var(--ine-gold) 50%, var(--ine-burgundy) 100%);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .footer-brand h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ine-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .footer-gold-line {
+      width: 40px;
+      height: 2px;
+      background: var(--ine-gold);
+      margin: 1rem 0;
+    }
+
+    .footer-links h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ine-gold);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .footer-links li a {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.52);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links li a:hover {
+      color: var(--ine-gold-light);
     }
 
     .footer-copy {
-      flex-direction: column;
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.3);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
-    .pub-item {
-      flex-wrap: wrap;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .header-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .author-card {
+        max-width: 360px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
     }
-  }
-</style>
+
+    @media (max-width: 768px) {
+
+      .header-inner,
+      .nav-inner,
+      .intro-strip,
+      main,
+      footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .intro-strip-inner {
+        gap: 1.2rem;
+      }
+
+      .intro-divider {
+        display: none;
+      }
+
+      .bloque-header {
+        flex-wrap: wrap;
+      }
+
+      .bloque-count {
+        margin-left: 0;
+      }
+
+      .footer-copy {
+        flex-direction: column;
+      }
+
+      .pub-item {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="header-accent"></div>
-  <div class="header-pattern"></div>
-  <div class="header-inner">
-    <div>
-      <div class="header-badge"><span></span> Portafolio profesional · Derecho, gestión y tecnología</div>
-      <h1>Iram Yovan <em>Sánchez Gómez</em></h1>
-      <p class="subtitle">Abogado, servidor público electoral, docente universitario y desarrollador de proyectos académicos y tecnológicos. Perfil multidisciplinario con más de 15 años de trayectoria en el ámbito institucional mexicano.</p>
-    </div>
-
-    <aside class="author-card">
-      <div class="author-avatar">IY</div>
-      <div class="author-name">Iram Yovan<br>Sánchez Gómez</div>
-      <div class="author-role">Vocal Ejecutivo Distrital<br>Servicio Profesional Electoral</div>
-      <div class="author-location">
-        Ocosingo, Chiapas, México
+  <!-- HEADER -->
+  <header>
+    <div class="header-accent"></div>
+    <div class="header-pattern"></div>
+    <div class="header-inner">
+      <div>
+        <div class="header-badge"><span></span> Portafolio profesional · Derecho, gestión y tecnología</div>
+        <h1>Iram Yovan <em>Sánchez Gómez</em></h1>
+        <p class="subtitle">Abogado, servidor público electoral, docente universitario y desarrollador de proyectos
+          académicos y tecnológicos. Perfil multidisciplinario con más de 15 años de trayectoria en el ámbito
+          institucional mexicano.</p>
       </div>
-      <div class="author-links">
-        <a href="curriculum-iram-sanchez.html">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Curriculum
-        </a>
+
+      <aside class="author-card">
+        <div class="author-avatar">IY</div>
+        <div class="author-name">Iram Yovan<br>Sánchez Gómez</div>
+        <div class="author-role">Vocal Ejecutivo Distrital<br>Servicio Profesional Electoral</div>
+        <div class="author-location">
+          Ocosingo, Chiapas, México
+        </div>
+        <div class="author-links">
+          <a href="curriculum-iram-sanchez.html">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            Curriculum
+          </a>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="blocks-nav">
+    <div class="nav-inner">
+      <a href="#perfil" class="active"><span class="nav-num">1</span> Perfil profesional</a>
+      <a href="#formacion"><span class="nav-num">2</span> Formación</a>
+      <a href="#publicaciones"><span class="nav-num">3</span> Publicaciones</a>
+    </div>
+  </nav>
+
+  <!-- INTRO STATS -->
+
+
+  <!-- MAIN -->
+  <main>
+
+
+
+    <!-- BLOQUE 3: PUBLICACIONES -->
+    <section class="bloque" id="publicaciones">
+      <div class="bloque-header">
+        <div class="bloque-num">01</div>
+        <div class="bloque-info">
+          <h2>Publicaciones y contenidos</h2>
+          <p>Materiales de divulgación, análisis y recursos interactivos organizados por área temática.</p>
+        </div>
+        <div class="bloque-count">1 tema activo</div>
       </div>
-    </aside>
-  </div>
-</header>
 
-<!-- NAV -->
-<nav class="blocks-nav">
-  <div class="nav-inner">
-    <a href="#perfil" class="active"><span class="nav-num">1</span> Perfil profesional</a>
-    <a href="#formacion"><span class="nav-num">2</span> Formación</a>
-    <a href="#publicaciones"><span class="nav-num">3</span> Publicaciones</a>
-  </div>
-</nav>
+      <!-- TEMA: Político-Electoral -->
+      <div class="topic-label">
+        <div class="topic-label-dot"></div> Tema: Político-Electoral
+      </div>
 
-<!-- INTRO STATS -->
-<div class="intro-strip">
-  <div class="intro-strip-inner">
-    <div class="intro-stat">
-      <div class="stat-num">15+</div>
-      <div class="stat-label">Años de trayectoria profesional</div>
-    </div>
-    <div class="intro-divider"></div>
-    <div class="intro-stat">
-      <div class="stat-num">5</div>
-      <div class="stat-label">Procesos electorales federales</div>
-    </div>
-    <div class="intro-divider"></div>
-    <div class="intro-stat">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Grados académicos</div>
-    </div>
-    <div class="intro-divider"></div>
-    <div class="intro-text">
-      Trayectoria que integra función pública electoral, dirección distrital, docencia universitaria, formación jurídica y desarrollo de proyectos académicos y tecnológicos.
-      <br>
-      <a href="curriculum-iram-sanchez.html" class="intro-cta">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        Ver curriculum completo
+      <a href="reformas-electorales.html" class="pub-featured">
+        <div class="pub-featured-banner">
+          <div class="pub-featured-category"><span></span> Divulgación electoral</div>
+          <h3>Historia de las Reformas Electorales en México</h3>
+          <p>Análisis cronológico y temático de la evolución del sistema electoral mexicano: de las Juntas Computadoras
+            de 1917 al Instituto Nacional Electoral de 2014.</p>
+          <div class="pub-featured-tags">
+            <span class="pub-feat-tag highlight">Timelines interactivos</span>
+            <span class="pub-feat-tag">Reformas constitucionales</span>
+            <span class="pub-feat-tag">INE · IFE</span>
+            <span class="pub-feat-tag">TEPJF</span>
+            <span class="pub-feat-tag">1917 — 2014</span>
+          </div>
+        </div>
+        <div class="pub-featured-body">
+          <div class="pub-featured-stats">
+            <div class="pub-feat-stat">
+              <div class="pub-feat-stat-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div class="pub-feat-stat-text">
+                <strong>11</strong> Timelines
+              </div>
+            </div>
+            <div class="pub-feat-stat">
+              <div class="pub-feat-stat-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <line x1="3" y1="9" x2="21" y2="9" />
+                  <line x1="9" y1="21" x2="9" y2="9" />
+                </svg>
+              </div>
+              <div class="pub-feat-stat-text">
+                <strong>4</strong> Bloques analíticos
+              </div>
+            </div>
+            <div class="pub-feat-stat">
+              <div class="pub-feat-stat-icon">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <div class="pub-feat-stat-text">
+                <strong>107</strong> Años de historia
+              </div>
+            </div>
+          </div>
+          <div class="pub-featured-cta">
+            Explorar
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
       </a>
-    </div>
-  </div>
-</div>
 
-<!-- MAIN -->
-<main>
-
-  <!-- BLOQUE 1: PERFIL -->
-  <section class="bloque" id="perfil">
-    <div class="bloque-header">
-      <div class="bloque-num">01</div>
-      <div class="bloque-info">
-        <h2>Perfil profesional</h2>
-        <p>Competencias clave y áreas de especialización que definen la trayectoria profesional y académica.</p>
+      <!-- Placeholder para más temas -->
+      <div class="pub-upcoming">
+        <div class="pub-upcoming-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="16" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+          </svg>
+        </div>
+        <h4>Más temas y publicaciones próximamente</h4>
+        <p>Se agregarán nuevas áreas temáticas y contenidos conforme estén disponibles.</p>
       </div>
-      <div class="bloque-count">6 competencias</div>
-    </div>
+    </section>
 
-    <div class="profile-grid">
-      <!-- Card 1 -->
-      <div class="profile-card">
-        <div class="profile-card-icon burgundy">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Función pública electoral</h3>
-        <p>Conducción ejecutiva de órganos distritales y locales del INE. Experiencia acumulada en cinco procesos electorales federales con responsabilidad directiva.</p>
-        <div class="card-tags">
-          <span class="card-tag key">INE</span>
-          <span class="card-tag">IFE</span>
-          <span class="card-tag">Servicio Profesional Electoral</span>
-        </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Iram Yovan Sánchez Gómez</h3>
+        <div class="footer-gold-line"></div>
+        <p>Portafolio profesional y plataforma de divulgación. Perfil con cruces entre derecho electoral, gestión
+          institucional, docencia y tecnología aplicada.</p>
       </div>
-
-      <!-- Card 2 -->
-      <div class="profile-card">
-        <div class="profile-card-icon gold">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Derecho y argumentación jurídica</h3>
-        <p>Formación jurídica con título y cédula profesional No. 612301. Especialización en derecho electoral, medios de impugnación y procedimientos sancionadores.</p>
-        <div class="card-tags">
-          <span class="card-tag key">Licenciatura en Derecho</span>
-          <span class="card-tag">UNADM</span>
-          <span class="card-tag">Cédula 612301</span>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="profile-card">
-        <div class="profile-card-icon burgundy">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        </div>
-        <h3>Docencia universitaria</h3>
-        <p>Profesor de tiempo completo con perfil PROMEP. Experiencia en tecnologías de la información, administración de proyectos y desarrollo de aplicaciones web.</p>
-        <div class="card-tags">
-          <span class="card-tag key">UT Selva</span>
-          <span class="card-tag">Perfil PROMEP</span>
-          <span class="card-tag">TI</span>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="profile-card">
-        <div class="profile-card-icon gold">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <h3>Gestión y administración</h3>
-        <p>Maestría en Administración Empresarial por el ITESM. Herramientas de liderazgo, toma de decisiones y administración de recursos en entornos institucionales complejos.</p>
-        <div class="card-tags">
-          <span class="card-tag key">Maestría ITESM</span>
-          <span class="card-tag">Administración</span>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="profile-card">
-        <div class="profile-card-icon burgundy">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3>Tecnología y desarrollo</h3>
-        <p>Ingeniería en Sistemas Computacionales. Certificación Microsoft (MCAD). Experiencia en ASP.NET, MOODLE, robótica educativa y desarrollo de sistemas de información.</p>
-        <div class="card-tags">
-          <span class="card-tag key">Ing. Sistemas</span>
-          <span class="card-tag">Microsoft MCAD</span>
-          <span class="card-tag">ASP.NET</span>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="profile-card">
-        <div class="profile-card-icon gold">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h3>Investigación y publicaciones</h3>
-        <p>Producción académica con publicaciones ISBN. Ponencias en congresos nacionales e internacionales. Tercer lugar mundial en competencia de robótica en Dallas, Texas.</p>
-        <div class="card-tags">
-          <span class="card-tag key">ISBN</span>
-          <span class="card-tag">Robótica Dallas</span>
-          <span class="card-tag">ANIEI</span>
-        </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#perfil">Perfil profesional</a></li>
+          <li><a href="#formacion">Formación académica</a></li>
+          <li><a href="#publicaciones">Publicaciones</a></li>
+          <li><a href="curriculum-iram-sanchez.html">Curriculum completo</a></li>
+          <li><a href="reformas-electorales.html">Reformas Electorales</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- BLOQUE 2: FORMACIÓN -->
-  <section class="bloque" id="formacion">
-    <div class="bloque-header">
-      <div class="bloque-num">02</div>
-      <div class="bloque-info">
-        <h2>Formación académica</h2>
-        <p>Trayectoria formativa multidisciplinaria que articula derecho, administración, ingeniería y sistemas de información.</p>
-      </div>
-      <div class="bloque-count">4 grados</div>
+    <div class="footer-copy">
+      <span>Ocosingo, Chiapas, México</span>
+      <span>© 2025 Iram Yovan Sánchez Gómez · Portafolio profesional</span>
     </div>
+  </footer>
 
-    <div class="profile-grid">
-      <div class="profile-card">
-        <div class="profile-card-icon burgundy">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Licenciatura en Derecho</h3>
-        <p>Universidad Abierta y a Distancia de México (UNADM). Título y cédula profesional No. 612301.</p>
-        <div class="card-tags">
-          <span class="card-tag key">UNADM</span>
-          <span class="card-tag">Título</span>
-          <span class="card-tag">Cédula 612301</span>
-        </div>
-      </div>
+  <script>
 
-      <div class="profile-card">
-        <div class="profile-card-icon gold">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
-        </div>
-        <h3>Maestría en Administración Empresarial</h3>
-        <p>ITESM Campus Virtual. Concluida en diciembre de 2013. Orientada a gestión organizacional y toma de decisiones.</p>
-        <div class="card-tags">
-          <span class="card-tag key">ITESM</span>
-          <span class="card-tag">Dic 2013</span>
-        </div>
-      </div>
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section.bloque');
+    const navLinks = document.querySelectorAll('nav.blocks-nav a');
 
-      <div class="profile-card">
-        <div class="profile-card-icon burgundy">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </div>
-        <h3>Maestría en Ingeniería de Sistemas de Información y Transporte</h3>
-        <p>UVM Chiapas. Área de investigación de operaciones. Grado y cédula profesional.</p>
-        <div class="card-tags">
-          <span class="card-tag key">UVM Chiapas</span>
-          <span class="card-tag">Inv. Operaciones</span>
-          <span class="card-tag">Cédula</span>
-        </div>
-      </div>
-
-      <div class="profile-card">
-        <div class="profile-card-icon gold">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3>Ingeniería en Sistemas Computacionales</h3>
-        <p>Formación técnica base. Título y cédula profesional. Sustento de la experiencia en desarrollo, docencia TI y proyectos tecnológicos.</p>
-        <div class="card-tags">
-          <span class="card-tag key">Ingeniería</span>
-          <span class="card-tag">Título</span>
-          <span class="card-tag">Cédula</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOQUE 3: PUBLICACIONES -->
-  <section class="bloque" id="publicaciones">
-    <div class="bloque-header">
-      <div class="bloque-num">03</div>
-      <div class="bloque-info">
-        <h2>Publicaciones y contenidos</h2>
-        <p>Materiales de divulgación, análisis y recursos interactivos organizados por área temática.</p>
-      </div>
-      <div class="bloque-count">1 tema activo</div>
-    </div>
-
-    <!-- TEMA: Político-Electoral -->
-    <div class="topic-label"><div class="topic-label-dot"></div> Tema: Político-Electoral</div>
-
-    <a href="reformas-electorales.html" class="pub-featured">
-      <div class="pub-featured-banner">
-        <div class="pub-featured-category"><span></span> Divulgación electoral</div>
-        <h3>Historia de las Reformas Electorales en México</h3>
-        <p>Análisis cronológico y temático de la evolución del sistema electoral mexicano: de las Juntas Computadoras de 1917 al Instituto Nacional Electoral de 2014.</p>
-        <div class="pub-featured-tags">
-          <span class="pub-feat-tag highlight">Timelines interactivos</span>
-          <span class="pub-feat-tag">Reformas constitucionales</span>
-          <span class="pub-feat-tag">INE · IFE</span>
-          <span class="pub-feat-tag">TEPJF</span>
-          <span class="pub-feat-tag">1917 — 2014</span>
-        </div>
-      </div>
-      <div class="pub-featured-body">
-        <div class="pub-featured-stats">
-          <div class="pub-feat-stat">
-            <div class="pub-feat-stat-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="pub-feat-stat-text">
-              <strong>11</strong> Timelines
-            </div>
-          </div>
-          <div class="pub-feat-stat">
-            <div class="pub-feat-stat-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            </div>
-            <div class="pub-feat-stat-text">
-              <strong>4</strong> Bloques analíticos
-            </div>
-          </div>
-          <div class="pub-feat-stat">
-            <div class="pub-feat-stat-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <div class="pub-feat-stat-text">
-              <strong>107</strong> Años de historia
-            </div>
-          </div>
-        </div>
-        <div class="pub-featured-cta">
-          Explorar
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </div>
-      </div>
-    </a>
-
-    <!-- Placeholder para más temas -->
-    <div class="pub-upcoming">
-      <div class="pub-upcoming-icon">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-      </div>
-      <h4>Más temas y publicaciones próximamente</h4>
-      <p>Se agregarán nuevas áreas temáticas y contenidos conforme estén disponibles.</p>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <h3>Iram Yovan Sánchez Gómez</h3>
-      <div class="footer-gold-line"></div>
-      <p>Portafolio profesional y plataforma de divulgación. Perfil con cruces entre derecho electoral, gestión institucional, docencia y tecnología aplicada.</p>
-    </div>
-    <div class="footer-links">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="#perfil">Perfil profesional</a></li>
-        <li><a href="#formacion">Formación académica</a></li>
-        <li><a href="#publicaciones">Publicaciones</a></li>
-        <li><a href="curriculum-iram-sanchez.html">Curriculum completo</a></li>
-        <li><a href="reformas-electorales.html">Reformas Electorales</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-copy">
-    <span>Ocosingo, Chiapas, México</span>
-    <span>© 2025 Iram Yovan Sánchez Gómez · Portafolio profesional</span>
-  </div>
-</footer>
-
-<script>
-
-  // Active nav on scroll
-  const sections = document.querySelectorAll('section.bloque');
-  const navLinks = document.querySelectorAll('nav.blocks-nav a');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
       });
+    }, {
+      rootMargin: '-30% 0px -55% 0px',
+      threshold: 0.01
     });
-  }, {
-    rootMargin: '-30% 0px -55% 0px',
-    threshold: 0.01
-  });
 
-  sections.forEach(s => observer.observe(s));
-</script>
+    sections.forEach(s => observer.observe(s));
+  </script>
 </body>
+
 </html>
