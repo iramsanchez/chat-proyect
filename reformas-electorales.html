@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia de las Reformas Electorales en México — Iram Yovan Sánchez Gómez</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ine-burgundy: #6B1A2A;
+    --ine-gold: #C8A84B;
+    --ine-gold-light: #E8D08A;
+    --ine-dark: #1A1A2E;
+    --ine-gray-dark: #2D2D3A;
+    --ine-gray-mid: #5A5A6E;
+    --ine-gray-light: #F0EDE8;
+    --ine-cream: #FAF8F4;
+    --ine-white: #FFFFFF;
+    --ine-red-soft: #8B2340;
+    --ine-gold-dark: #9A7A28;
+    --shadow-sm: 0 2px 8px rgba(107,26,42,0.08);
+    --shadow-md: 0 4px 24px rgba(107,26,42,0.12);
+    --shadow-lg: 0 8px 48px rgba(107,26,42,0.18);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--ine-cream);
+    color: var(--ine-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background: var(--ine-burgundy);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .header-accent {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ine-gold) 0%, var(--ine-gold-light) 50%, var(--ine-gold) 100%);
+  }
+
+  .header-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #fff 0px, #fff 1px,
+      transparent 1px, transparent 20px
+    );
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(200,168,75,0.15);
+    border: 1px solid rgba(200,168,75,0.35);
+    border-radius: 2px;
+    padding: 4px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ine-gold-light);
+    margin-bottom: 1.2rem;
+  }
+
+  .header-badge span {
+    width: 6px; height: 6px;
+    background: var(--ine-gold);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--ine-white);
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+  }
+
+  header h1 em {
+    font-style: normal;
+    color: var(--ine-gold);
+  }
+
+  header p.subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.72);
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 1.65;
+  }
+
+  .author-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,168,75,0.25);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    min-width: 200px;
+  }
+
+  .author-avatar {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--ine-gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ine-burgundy);
+    margin: 0 auto 0.75rem;
+    border: 2px solid rgba(200,168,75,0.5);
+  }
+
+  .author-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ine-white);
+    line-height: 1.3;
+  }
+
+  .author-title {
+    font-size: 0.75rem;
+    color: var(--ine-gold-light);
+    margin-top: 4px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+  }
+
+  /* ===== NAV BLOQUES ===== */
+  nav.blocks-nav {
+    background: var(--ine-dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--ine-burgundy);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-inner::-webkit-scrollbar { display: none; }
+
+  nav.blocks-nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    margin-bottom: -2px;
+  }
+
+  nav.blocks-nav a:hover,
+  nav.blocks-nav a.active {
+    color: var(--ine-gold);
+    border-bottom-color: var(--ine-gold);
+  }
+
+  .nav-num {
+    font-size: 0.7rem;
+    background: var(--ine-burgundy);
+    color: var(--ine-gold-light);
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  /* ===== INTRO STRIP ===== */
+  .intro-strip {
+    background: var(--ine-white);
+    border-bottom: 1px solid rgba(107,26,42,0.1);
+    padding: 1.75rem 2rem;
+  }
+
+  .intro-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .intro-stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ine-burgundy);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--ine-gray-mid);
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 100px;
+  }
+
+  .intro-divider {
+    width: 1px; height: 40px;
+    background: rgba(107,26,42,0.12);
+  }
+
+  .intro-text {
+    flex: 1;
+    min-width: 280px;
+    font-size: 0.92rem;
+    color: var(--ine-gray-mid);
+    border-left: 3px solid var(--ine-gold);
+    padding-left: 1rem;
+    line-height: 1.65;
+  }
+
+  /* ===== MAIN ===== */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+  }
+
+  /* ===== BLOQUE ===== */
+  .bloque {
+    margin-bottom: 4rem;
+  }
+
+  .bloque-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--ine-gray-light);
+    position: relative;
+  }
+
+  .bloque-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 80px; height: 2px;
+    background: var(--ine-burgundy);
+  }
+
+  .bloque-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(107,26,42,0.12);
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: -0.5rem;
+  }
+
+  .bloque-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ine-burgundy);
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+
+  .bloque-info p {
+    font-size: 0.9rem;
+    color: var(--ine-gray-mid);
+    font-weight: 300;
+  }
+
+  .bloque-count {
+    margin-left: auto;
+    flex-shrink: 0;
+    background: var(--ine-burgundy);
+    color: var(--ine-gold-light);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 2px;
+  }
+
+  /* ===== TIMELINE CARD ===== */
+  .timeline-card {
+    background: var(--ine-white);
+    border: 1px solid rgba(107,26,42,0.1);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s;
+  }
+
+  .timeline-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-header {
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+  }
+
+  .card-header::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--ine-burgundy);
+    border-radius: 4px 0 0 4px;
+  }
+
+  .card-type {
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-top: 2px;
+  }
+
+  .type-original {
+    background: rgba(107,26,42,0.08);
+    color: var(--ine-burgundy);
+    border: 1px solid rgba(107,26,42,0.2);
+  }
+
+  .type-nuevo {
+    background: rgba(200,168,75,0.12);
+    color: var(--ine-gold-dark);
+    border: 1px solid rgba(200,168,75,0.3);
+  }
+
+  .type-reenfocado {
+    background: rgba(26,26,46,0.07);
+    color: var(--ine-gray-mid);
+    border: 1px solid rgba(26,26,46,0.15);
+  }
+
+  .card-text { flex: 1; }
+
+  .card-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ine-dark);
+    margin-bottom: 0.3rem;
+    line-height: 1.35;
+  }
+
+  .card-text p {
+    font-size: 0.87rem;
+    color: var(--ine-gray-mid);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  /* Hitos / milestones */
+  .milestones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.75rem;
+  }
+
+  .milestone {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background: var(--ine-gray-light);
+    color: var(--ine-gray-mid);
+    border: 1px solid rgba(107,26,42,0.08);
+    letter-spacing: 0.3px;
+  }
+
+  .milestone.key {
+    background: rgba(107,26,42,0.07);
+    color: var(--ine-burgundy);
+    border-color: rgba(107,26,42,0.18);
+  }
+
+  /* Toggle chevron */
+  .card-toggle {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: var(--ine-gray-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.3s;
+    margin-top: 2px;
+  }
+
+  .card-toggle svg {
+    width: 14px; height: 14px;
+    stroke: var(--ine-gray-mid);
+    transition: transform 0.3s;
+  }
+
+  .timeline-card.open .card-toggle {
+    background: var(--ine-burgundy);
+  }
+
+  .timeline-card.open .card-toggle svg {
+    stroke: #fff;
+    transform: rotate(180deg);
+  }
+
+  /* Timeline iframe container */
+  .timeline-container {
+    display: none;
+    border-top: 1px solid rgba(107,26,42,0.08);
+    background: #f8f6f2;
+  }
+
+  .timeline-card.open .timeline-container {
+    display: block;
+  }
+
+  .timeline-loader {
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--ine-gray-mid);
+    font-size: 0.85rem;
+  }
+
+  .timeline-loader-icon {
+    width: 32px; height: 32px;
+    border: 2px solid var(--ine-gray-light);
+    border-top-color: var(--ine-burgundy);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .timeline-container iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+    display: block;
+  }
+
+  .coming-soon {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .coming-soon-icon {
+    width: 48px; height: 48px;
+    background: rgba(107,26,42,0.06);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+  }
+
+  .coming-soon-icon svg {
+    width: 22px; height: 22px;
+    stroke: var(--ine-burgundy);
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  .coming-soon h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--ine-burgundy);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .coming-soon p {
+    font-size: 0.83rem;
+    color: var(--ine-gray-mid);
+    font-weight: 300;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--ine-dark);
+    border-top: 3px solid var(--ine-burgundy);
+    padding: 3rem 2rem;
+    position: relative;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--ine-burgundy) 0%, var(--ine-gold) 50%, var(--ine-burgundy) 100%);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ine-white);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .footer-gold-line {
+    width: 40px; height: 2px;
+    background: var(--ine-gold);
+    margin: 1rem 0;
+  }
+
+  .footer-links h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ine-gold);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-links li a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links li a:hover {
+    color: var(--ine-gold-light);
+  }
+
+  .footer-copy {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .header-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .author-card {
+      width: 100%;
+    }
+
+    .intro-strip-inner {
+      gap: 1.25rem;
+    }
+
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-copy {
+      flex-direction: column;
+    }
+
+    .bloque-count {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-accent"></div>
+  <div class="header-pattern"></div>
+  <div class="header-inner">
+    <div>
+      <div class="header-badge"><span></span> Divulgación Electoral · México</div>
+      <h1>Historia de las <em>Reformas Electorales</em> en México</h1>
+      <p class="subtitle">Análisis cronológico y temático de la evolución del sistema electoral mexicano: de las Juntas Computadoras de 1917 al Instituto Nacional Electoral de 2014.</p>
+    </div>
+    <div class="author-card">
+      <div class="author-avatar">IY</div>
+      <div class="author-name">Iram Yovan<br>Sánchez Gómez</div>
+      <div class="author-title">Especialista en Derecho<br>y Procesos Electorales</div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="blocks-nav">
+  <div class="nav-inner">
+    <a href="#bloque1" class="active"><span class="nav-num">1</span> Instituciones y Marcos Legales</a>
+    <a href="#bloque2"><span class="nav-num">2</span> Justicia Electoral</a>
+    <a href="#bloque3"><span class="nav-num">3</span> Partidos y Representación</a>
+    <a href="#bloque4"><span class="nav-num">4</span> Ciudadanía y Derechos</a>
+  </div>
+</nav>
+
+<!-- INTRO STATS -->
+<div class="intro-strip">
+  <div class="intro-strip-inner">
+    <div class="intro-stat">
+      <div class="stat-num">11</div>
+      <div class="stat-label">Timelines<br>temáticos</div>
+    </div>
+    <div class="intro-divider"></div>
+    <div class="intro-stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Bloques<br>analíticos</div>
+    </div>
+    <div class="intro-divider"></div>
+    <div class="intro-stat">
+      <div class="stat-num">107</div>
+      <div class="stat-label">Años de<br>evolución</div>
+    </div>
+    <div class="intro-divider"></div>
+    <div class="intro-text">
+      De la autogestión electoral del Congreso constituyente de 1917 a la ciudadanización plena del INE en 2014, México construyó paso a paso uno de los sistemas electorales más robustos de América Latina.
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- BLOQUE 1 -->
+  <section class="bloque" id="bloque1">
+    <div class="bloque-header">
+      <div class="bloque-num">01</div>
+      <div class="bloque-info">
+        <h2>Instituciones y Marcos Legales</h2>
+        <p>Autoridades electorales, legislación rectora y evolución en los estados</p>
+      </div>
+      <div class="bloque-count">3 timelines</div>
+    </div>
+
+    <!-- Timeline 1 -->
+    <div class="timeline-card" id="tc1">
+      <div class="card-header" onclick="toggleCard('tc1')">
+        <div class="card-type type-original">Original</div>
+        <div class="card-text">
+          <h3>Autoridades electorales</h3>
+          <p>Evolución de los órganos rectores: de las Juntas Computadoras de 1917 a la Comisión Federal, el IFE y el INE.</p>
+          <div class="milestones">
+            <span class="milestone key">1917</span>
+            <span class="milestone">1946</span>
+            <span class="milestone">1973</span>
+            <span class="milestone">1990</span>
+            <span class="milestone key">2014 INE</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-loader" id="loader-tc1">
+          <div class="timeline-loader-icon"></div>
+          Cargando línea de tiempo…
+        </div>
+        <iframe
+          src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vTg0C-wkAhFJU47jjZeefGvgHNlJJWRQXn_K2CZqIxR-RGh8ixvFYQnVtMKwCVvcMIaJ27WUNFsz3wv&font=Default&lang=es&initial_zoom=2&width=100%25&height=650"
+          onload="hideLoader('loader-tc1')"
+          title="Timeline: Autoridades electorales"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Timeline 2 -->
+    <div class="timeline-card" id="tc2">
+      <div class="card-header" onclick="toggleCard('tc2')">
+        <div class="card-type type-reenfocado">Reenfocado</div>
+        <div class="card-text">
+          <h3>Marcos legales y reforma constitucional</h3>
+          <p>Las grandes leyes que estructuraron el sistema: Ley Federal Electoral, LFOPPE, COFIPE y reformas constitucionales de 1996 y 2014.</p>
+          <div class="milestones">
+            <span class="milestone key">1946</span>
+            <span class="milestone">1977</span>
+            <span class="milestone">1986</span>
+            <span class="milestone">1990</span>
+            <span class="milestone key">1996</span>
+            <span class="milestone key">2014</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-loader" id="loader-tc2">
+          <div class="timeline-loader-icon"></div>
+          Cargando línea de tiempo…
+        </div>
+        <iframe
+          src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vRYUA-nzwkCHIbl64McIxVZLZ0cdwHW9CAwbYHWAI8FR6Rbomeezy71PTA3HA9BcZ6rc68vVEIlLc9V&font=Default&lang=es&initial_zoom=2&width=100%25&height=650"
+          onload="hideLoader('loader-tc2')"
+          title="Timeline: Marcos legales y reforma constitucional"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Timeline 3 -->
+    <div class="timeline-card" id="tc3">
+      <div class="card-header" onclick="toggleCard('tc3')">
+        <div class="card-type type-nuevo">Nuevo</div>
+        <div class="card-text">
+          <h3>Evolución electoral en los estados</h3>
+          <p>Homologación del sistema electoral local: organismos públicos locales, primera elección del DF, atribuciones del INE en estados.</p>
+          <div class="milestones">
+            <span class="milestone key">1946 locales</span>
+            <span class="milestone">1994 distrital</span>
+            <span class="milestone">1997 DF</span>
+            <span class="milestone key">2014 OPLE</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-loader" id="loader-tc3">
+          <div class="timeline-loader-icon"></div>
+          Cargando línea de tiempo…
+        </div>
+        <iframe
+          src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vRk9OWqZ0MDcSoewChMu4erkfLkUJyRHT31AjZHykB56HrERyPF0hmcvlzBEKBDoipBP9qyjmxtzvDe&font=Default&lang=es&initial_zoom=2&width=100%25&height=650"
+          onload="hideLoader('loader-tc3')"
+          title="Timeline: Evolución electoral en los estados"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 2 -->
+  <section class="bloque" id="bloque2">
+    <div class="bloque-header">
+      <div class="bloque-num">02</div>
+      <div class="bloque-info">
+        <h2>Justicia y Contencioso Electoral</h2>
+        <p>Medios de impugnación, autocalificación y composición del órgano rector</p>
+      </div>
+      <div class="bloque-count">2 timelines</div>
+    </div>
+
+    <!-- Timeline 4 -->
+    <div class="timeline-card" id="tc4">
+      <div class="card-header" onclick="toggleCard('tc4')">
+        <div class="card-type type-nuevo">Nuevo</div>
+        <div class="card-text">
+          <h3>Contencioso electoral y medios de impugnación</h3>
+          <p>De la autocalificación por Colegios Electorales del Congreso, pasando por el TRICOEL y el TRIFE, hasta el TEPJF como máximo árbitro electoral.</p>
+          <div class="milestones">
+            <span class="milestone key">1917 colegios</span>
+            <span class="milestone">1987 TRICOEL</span>
+            <span class="milestone">1990 TRIFE</span>
+            <span class="milestone key">1996 TEPJF</span>
+            <span class="milestone">1996 autocalif.</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Timeline en preparación</h4>
+          <p>Este timeline será publicado próximamente con eventos enriquecidos sobre el contencioso electoral.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline 5 -->
+    <div class="timeline-card" id="tc5">
+      <div class="card-header" onclick="toggleCard('tc5')">
+        <div class="card-type type-reenfocado">Reenfocado</div>
+        <div class="card-text">
+          <h3>Consejo General: composición y autonomía</h3>
+          <p>Transformaciones en la integración del máximo órgano rector: de representantes gubernamentales a consejeros ciudadanos plenamente autónomos.</p>
+          <div class="milestones">
+            <span class="milestone key">1990</span>
+            <span class="milestone">1993</span>
+            <span class="milestone">1994</span>
+            <span class="milestone key">1996</span>
+            <span class="milestone">2014</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Timeline en preparación</h4>
+          <p>Este timeline será publicado próximamente con la evolución detallada del Consejo General.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 3 -->
+  <section class="bloque" id="bloque3">
+    <div class="bloque-header">
+      <div class="bloque-num">03</div>
+      <div class="bloque-info">
+        <h2>Partidos y Representación</h2>
+        <p>Registro, financiamiento, fiscalización y conformación de las cámaras legislativas</p>
+      </div>
+      <div class="bloque-count">3 timelines</div>
+    </div>
+
+    <!-- Timeline 6 -->
+    <div class="timeline-card" id="tc6">
+      <div class="card-header" onclick="toggleCard('tc6')">
+        <div class="card-type type-original">Original</div>
+        <div class="card-text">
+          <h3>Partidos políticos y competencia electoral</h3>
+          <p>Registro, representación proporcional, plurinominal y acceso de los partidos al sistema electoral.</p>
+          <div class="milestones">
+            <span class="milestone key">1951</span>
+            <span class="milestone">1977</span>
+            <span class="milestone">1986</span>
+            <span class="milestone key">1987 RP</span>
+            <span class="milestone">2007</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Timeline en preparación</h4>
+          <p>Este timeline será publicado próximamente con el historial completo de partidos y competencia electoral.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline 7 -->
+    <div class="timeline-card" id="tc7">
+      <div class="card-header" onclick="toggleCard('tc7')">
+        <div class="card-type type-nuevo">Nuevo</div>
+        <div class="card-text">
+          <h3>Financiamiento y fiscalización de partidos</h3>
+          <p>Evolución del financiamiento público, topes de campaña, fiscalización en tiempo real y control del gasto electoral.</p>
+          <div class="milestones">
+            <span class="milestone key">1986 recursos</span>
+            <span class="milestone">1993 topes</span>
+            <span class="milestone key">2007 fiscaliz.</span>
+            <span class="milestone">2014 expedita</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Timeline en preparación</h4>
+          <p>Este timeline será publicado próximamente con la evolución del financiamiento y fiscalización de partidos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline 8 -->
+    <div class="timeline-card" id="tc8">
+      <div class="card-header" onclick="toggleCard('tc8')">
+        <div class="card-type type-nuevo">Nuevo</div>
+        <div class="card-text">
+          <h3>Conformación de Cámaras: Diputados y Senadores</h3>
+          <p>Evolución del sistema bicameral: mayoría relativa, representación proporcional, senado plurinominal y primera legislatura pluripartidista.</p>
+          <div class="milestones">
+            <span class="milestone key">1977 diputados</span>
+            <span class="milestone">1986 ampliación</span>
+            <span class="milestone">1987 RP CFE</span>
+            <span class="milestone">1991 legisladores</span>
+            <span class="milestone key">1996 senado</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Timeline en preparación</h4>
+          <p>Este timeline será publicado próximamente con la historia de la conformación bicameral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 4 -->
+  <section class="bloque" id="bloque4">
+    <div class="bloque-header">
+      <div class="bloque-num">04</div>
+      <div class="bloque-info">
+        <h2>Ciudadanía y Derechos</h2>
+        <p>Sufragio, candidaturas independientes, transparencia y profesionalización electoral</p>
+      </div>
+      <div class="bloque-count">3 timelines</div>
+    </div>
+
+    <!-- Timeline 9 -->
+    <div class="timeline-card" id="tc9">
+      <div class="card-header" onclick="toggleCard('tc9')">
+        <div class="card-type type-original">Original</div>
+        <div class="card-text">
+          <h3>Participación ciudadana y derechos políticos</h3>
+          <p>Ampliación del sufragio: credencial con foto, voto en el exterior, candidaturas independientes e iniciativa ciudadana.</p>
+          <div class="milestones">
+            <span class="milestone key">1992</span>
+            <span class="milestone">2005 exterior</span>
+            <span class="milestone">2011 género</span>
+            <span class="milestone key">2012 indep.</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Timeline en preparación</h4>
+          <p>Este timeline será publicado próximamente con la historia de los derechos políticos y participación ciudadana.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline 10 -->
+    <div class="timeline-card" id="tc10">
+      <div class="card-header" onclick="toggleCard('tc10')">
+        <div class="card-type type-reenfocado">Reenfocado</div>
+        <div class="card-text">
+          <h3>Transparencia, observación y profesionalización</h3>
+          <p>Credencial de elector como ID, Servicio Profesional Electoral, observadores internacionales y rendición de cuentas.</p>
+          <div class="milestones">
+            <span class="milestone key">1992 credencial</span>
+            <span class="milestone">1992 SPE</span>
+            <span class="milestone">1994 observadores</span>
+            <span class="milestone key">2014 SPEN</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Timeline en preparación</h4>
+          <p>Este timeline será publicado próximamente con la evolución de la transparencia y profesionalización.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Iram Yovan Sánchez Gómez</h3>
+      <div class="footer-gold-line"></div>
+      <p>Especialista en Derecho Electoral y Procesos Electorales. Plataforma de divulgación sobre la historia y evolución del sistema electoral mexicano, desde una perspectiva académica y profesional.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegar timelines</h4>
+      <ul>
+        <li><a href="#bloque1">Bloque I — Instituciones y Marcos Legales</a></li>
+        <li><a href="#bloque2">Bloque II — Justicia y Contencioso Electoral</a></li>
+        <li><a href="#bloque3">Bloque III — Partidos y Representación</a></li>
+        <li><a href="#bloque4">Bloque IV — Ciudadanía y Derechos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>© 2025 Iram Yovan Sánchez Gómez · Todos los derechos reservados</span>
+    <span>Material de divulgación electoral · México</span>
+  </div>
+</footer>
+
+<script>
+  function toggleCard(id) {
+    const card = document.getElementById(id);
+    card.classList.toggle('open');
+  }
+
+  function hideLoader(id) {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  }
+
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section.bloque');
+  const navLinks = document.querySelectorAll('nav.blocks-nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const id = entry.target.getAttribute('id');
+        const link = document.querySelector(`nav.blocks-nav a[href="#${id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

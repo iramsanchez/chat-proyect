@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum Profesional - Iram Yovan Sanchez Gomez</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ine-burgundy: #6b1a2a;
+    --ine-gold: #c8a84b;
+    --ine-gold-light: #e8d08a;
+    --ine-gold-dark: #9a7a28;
+    --ine-dark: #1a1a2e;
+    --ine-gray-dark: #2d2d3a;
+    --ine-gray-mid: #5a5a6e;
+    --ine-gray-light: #f0ede8;
+    --ine-cream: #faf8f4;
+    --ine-white: #ffffff;
+    --shadow-sm: 0 2px 10px rgba(107, 26, 42, 0.08);
+    --shadow-md: 0 8px 28px rgba(107, 26, 42, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Source Sans 3", sans-serif;
+    background: var(--ine-cream);
+    color: var(--ine-dark);
+    line-height: 1.7;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  header {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at top right, rgba(232, 208, 138, 0.08), transparent 28%),
+      var(--ine-burgundy);
+  }
+
+  .header-accent {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ine-gold) 0%, var(--ine-gold-light) 50%, var(--ine-gold) 100%);
+  }
+
+  .header-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.9) 0,
+      rgba(255, 255, 255, 0.9) 1px,
+      transparent 1px,
+      transparent 18px
+    );
+  }
+
+  .header-inner,
+  .nav-inner,
+  .intro-strip-inner,
+  main,
+  .footer-inner,
+  .footer-copy {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 2rem;
+    align-items: center;
+    padding: 3.8rem 2rem 3rem;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 14px;
+    margin-bottom: 1.1rem;
+    border: 1px solid rgba(200, 168, 75, 0.35);
+    border-radius: 2px;
+    background: rgba(200, 168, 75, 0.12);
+    color: var(--ine-gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .header-badge span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ine-gold);
+  }
+
+  header h1 {
+    font-family: "Playfair Display", serif;
+    color: var(--ine-white);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  header h1 em {
+    color: var(--ine-gold);
+    font-style: normal;
+  }
+
+  .subtitle {
+    max-width: 720px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .author-card {
+    padding: 1.4rem 1.5rem;
+    border: 1px solid rgba(200, 168, 75, 0.26);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .author-avatar {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0.9rem;
+    border: 2px solid rgba(200, 168, 75, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ine-gold);
+    color: var(--ine-burgundy);
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .author-name {
+    color: var(--ine-white);
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .author-title,
+  .author-meta {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.82rem;
+    font-weight: 300;
+  }
+
+  .author-title {
+    margin-top: 0.35rem;
+  }
+
+  .author-meta {
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.55;
+  }
+
+  .blocks-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ine-dark);
+    border-bottom: 2px solid var(--ine-burgundy);
+  }
+
+  .nav-inner {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 2rem;
+    scrollbar-width: none;
+  }
+
+  .nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blocks-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: -2px;
+    border-bottom: 2px solid transparent;
+    color: rgba(255, 255, 255, 0.58);
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 0.84rem;
+    font-weight: 600;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .blocks-nav a:hover,
+  .blocks-nav a.active {
+    color: var(--ine-gold);
+    border-bottom-color: var(--ine-gold);
+  }
+
+  .nav-num {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ine-burgundy);
+    color: var(--ine-gold-light);
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+
+  .intro-strip {
+    background: var(--ine-white);
+    border-bottom: 1px solid rgba(107, 26, 42, 0.1);
+    padding: 1.8rem 2rem;
+  }
+
+  .intro-strip-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .intro-stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .stat-num {
+    color: var(--ine-burgundy);
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .stat-label {
+    max-width: 120px;
+    color: var(--ine-gray-mid);
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .intro-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(107, 26, 42, 0.12);
+  }
+
+  .intro-text {
+    flex: 1;
+    min-width: 280px;
+    padding-left: 1rem;
+    border-left: 3px solid var(--ine-gold);
+    color: var(--ine-gray-mid);
+    font-size: 0.93rem;
+  }
+
+  main {
+    padding: 3rem 2rem 5rem;
+  }
+
+  .bloque {
+    margin-bottom: 4rem;
+    scroll-margin-top: 84px;
+  }
+
+  .bloque-header {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--ine-gray-light);
+  }
+
+  .bloque-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 84px;
+    height: 2px;
+    background: var(--ine-burgundy);
+  }
+
+  .bloque-num {
+    flex-shrink: 0;
+    margin-top: -0.45rem;
+    color: rgba(107, 26, 42, 0.12);
+    font-family: "Playfair Display", serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .bloque-info h2 {
+    color: var(--ine-burgundy);
+    font-family: "Playfair Display", serif;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+  }
+
+  .bloque-info p {
+    color: var(--ine-gray-mid);
+    font-size: 0.92rem;
+    font-weight: 300;
+  }
+
+  .bloque-count {
+    margin-left: auto;
+    background: var(--ine-burgundy);
+    color: var(--ine-gold-light);
+    padding: 4px 12px;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .timeline-card {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(107, 26, 42, 0.1);
+    border-radius: 4px;
+    background: var(--ine-white);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .timeline-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-header {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.25rem 1.6rem;
+    cursor: pointer;
+  }
+
+  .card-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 4px 0 0 4px;
+    background: var(--ine-burgundy);
+  }
+
+  .card-type {
+    flex-shrink: 0;
+    margin-top: 2px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+
+  .type-original {
+    border: 1px solid rgba(107, 26, 42, 0.22);
+    background: rgba(107, 26, 42, 0.08);
+    color: var(--ine-burgundy);
+  }
+
+  .type-nuevo {
+    border: 1px solid rgba(200, 168, 75, 0.3);
+    background: rgba(200, 168, 75, 0.12);
+    color: var(--ine-gold-dark);
+  }
+
+  .type-reenfocado {
+    border: 1px solid rgba(26, 26, 46, 0.15);
+    background: rgba(26, 26, 46, 0.07);
+    color: var(--ine-gray-mid);
+  }
+
+  .card-text {
+    flex: 1;
+  }
+
+  .card-text h3 {
+    color: var(--ine-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    line-height: 1.35;
+    margin-bottom: 0.32rem;
+  }
+
+  .card-text p {
+    color: var(--ine-gray-mid);
+    font-size: 0.88rem;
+    font-weight: 300;
+  }
+
+  .milestones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.8rem;
+  }
+
+  .milestone {
+    padding: 3px 9px;
+    border: 1px solid rgba(107, 26, 42, 0.08);
+    border-radius: 12px;
+    background: var(--ine-gray-light);
+    color: var(--ine-gray-mid);
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .milestone.key {
+    border-color: rgba(107, 26, 42, 0.18);
+    background: rgba(107, 26, 42, 0.07);
+    color: var(--ine-burgundy);
+  }
+
+  .card-toggle {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ine-gray-light);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .card-toggle svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--ine-gray-mid);
+    transition: transform 0.3s ease, stroke 0.3s ease;
+  }
+
+  .timeline-card.open .card-toggle {
+    background: var(--ine-burgundy);
+  }
+
+  .timeline-card.open .card-toggle svg {
+    transform: rotate(180deg);
+    stroke: var(--ine-white);
+  }
+
+  .timeline-container {
+    display: none;
+    padding: 0 1.6rem 1.5rem;
+    border-top: 1px solid rgba(107, 26, 42, 0.08);
+    background: #f8f6f2;
+  }
+
+  .timeline-card.open .timeline-container {
+    display: block;
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding-top: 1.2rem;
+  }
+
+  .detail-block h4 {
+    color: var(--ine-burgundy);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.55rem;
+  }
+
+  .detail-block p,
+  .detail-block li {
+    color: var(--ine-gray-dark);
+    font-size: 0.9rem;
+  }
+
+  .detail-block ul {
+    padding-left: 1rem;
+  }
+
+  .detail-block li + li {
+    margin-top: 0.35rem;
+  }
+
+  footer {
+    position: relative;
+    padding: 3rem 2rem;
+    background: var(--ine-dark);
+    border-top: 3px solid var(--ine-burgundy);
+  }
+
+  footer::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--ine-burgundy) 0%, var(--ine-gold) 50%, var(--ine-burgundy) 100%);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-brand h3 {
+    color: var(--ine-white);
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-brand p,
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.52);
+    font-size: 0.86rem;
+    font-weight: 300;
+  }
+
+  .footer-gold-line {
+    width: 40px;
+    height: 2px;
+    margin: 1rem 0;
+    background: var(--ine-gold);
+  }
+
+  .footer-links h4 {
+    color: var(--ine-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--ine-gold-light);
+  }
+
+  .footer-copy {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.78rem;
+  }
+
+  @media (max-width: 900px) {
+    .header-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .author-card {
+      max-width: 360px;
+    }
+
+    .detail-grid,
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-inner,
+    .nav-inner,
+    .intro-strip,
+    main,
+    footer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .intro-strip-inner {
+      gap: 1.2rem;
+    }
+
+    .intro-divider {
+      display: none;
+    }
+
+    .bloque-header {
+      flex-wrap: wrap;
+    }
+
+    .bloque-count {
+      margin-left: 0;
+    }
+
+    .card-header {
+      padding: 1.15rem 1rem 1.15rem 1.2rem;
+    }
+
+    .timeline-container {
+      padding: 0 1rem 1.2rem 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-accent"></div>
+  <div class="header-pattern"></div>
+  <div class="header-inner">
+    <div>
+      <div class="header-badge"><span></span> Trayectoria profesional · Derecho, gestion y tecnologia</div>
+      <h1>Iram Yovan <em>Sanchez Gomez</em></h1>
+      <p class="subtitle">Perfil con experiencia en funcion publica electoral, direccion distrital, docencia universitaria y desarrollo de proyectos academicos y tecnologicos. La trayectoria integra formacion juridica, administracion, sistemas de informacion y operacion institucional.</p>
+    </div>
+
+    <aside class="author-card">
+      <div class="author-avatar">IY</div>
+      <div class="author-name">Iram Yovan<br>Sanchez Gomez</div>
+      <div class="author-title">Vocal Ejecutivo distrital - Servicio Profesional Electoral</div>
+      <div class="author-meta">
+        Base curricular compartida en Ocosingo, Chiapas<br>
+        Referencia documental fechada el 16 de junio de 2024
+      </div>
+    </aside>
+  </div>
+</header>
+
+<nav class="blocks-nav">
+  <div class="nav-inner">
+    <a href="#bloque1" class="active"><span class="nav-num">1</span> Trayectoria profesional</a>
+    <a href="#bloque2"><span class="nav-num">2</span> Formacion academica</a>
+    <a href="#bloque3"><span class="nav-num">3</span> Cursos y certificaciones</a>
+    <a href="#bloque4"><span class="nav-num">4</span> Docencia y publicaciones</a>
+  </div>
+</nav>
+
+<div class="intro-strip">
+  <div class="intro-strip-inner">
+    <div class="intro-stat">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Procesos electorales federales</div>
+    </div>
+    <div class="intro-divider"></div>
+    <div class="intro-stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Bloques de experiencia y formacion</div>
+    </div>
+    <div class="intro-divider"></div>
+    <div class="intro-stat">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">Anos de trayectoria en el ambito electoral</div>
+    </div>
+    <div class="intro-divider"></div>
+    <div class="intro-text">
+      La trayectoria combina conduccion operativa en juntas ejecutivas del sistema electoral, experiencia docente universitaria, formacion de posgrado y participacion en proyectos de investigacion aplicada, robotica educativa y desarrollo de sistemas.
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="bloque" id="bloque1">
+    <div class="bloque-header">
+      <div class="bloque-num">01</div>
+      <div class="bloque-info">
+        <h2>Trayectoria profesional</h2>
+        <p>Experiencia acumulada en el Instituto Nacional Electoral, el entonces Instituto Federal Electoral y la Universidad Tecnologica de la Selva.</p>
+      </div>
+      <div class="bloque-count">6 registros</div>
+    </div>
+
+    <article class="timeline-card open" id="card1">
+      <div class="card-header" onclick="toggleCard('card1')">
+        <div class="card-type type-original">Actual</div>
+        <div class="card-text">
+          <h3>Vocal Ejecutivo de Junta Distrital Ejecutiva - INE, Chiapas</h3>
+          <p>Desempeno directivo en organo distrital del Instituto Nacional Electoral desde septiembre de 2017, con titularidad en el puesto obtenida el mismo ano.</p>
+          <div class="milestones">
+            <span class="milestone key">2017 - presente</span>
+            <span class="milestone">Servicio Profesional Electoral</span>
+            <span class="milestone">Chiapas</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Responsabilidad</h4>
+            <p>Coordinacion ejecutiva y conduccion institucional de labores distritales dentro del sistema INE, con participacion acumulada en procesos electorales federales y seguimiento operativo a funciones sustantivas.</p>
+          </div>
+          <div class="detail-block">
+            <h4>Claves de perfil</h4>
+            <ul>
+              <li>Experiencia directiva en organos desconcentrados.</li>
+              <li>Titularidad del puesto obtenida en 2017.</li>
+              <li>Trayectoria consolidada dentro del Servicio Profesional Electoral.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card2">
+      <div class="card-header" onclick="toggleCard('card2')">
+        <div class="card-type type-nuevo">Transicion</div>
+        <div class="card-text">
+          <h3>Vocal Secretario de Junta Local Ejecutiva - INE, Oaxaca</h3>
+          <p>Responsabilidad estatal en la Junta Local Ejecutiva del Instituto Nacional Electoral durante el periodo abril de 2017 a septiembre de 2017.</p>
+          <div class="milestones">
+            <span class="milestone key">Abr 2017 - Sep 2017</span>
+            <span class="milestone">Oaxaca</span>
+            <span class="milestone">Junta Local</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Enfoque</h4>
+            <p>Apoyo juridico-administrativo y de coordinacion institucional a nivel local, en una etapa de enlace entre responsabilidades distritales y funciones directivas posteriores.</p>
+          </div>
+          <div class="detail-block">
+            <h4>Aportes</h4>
+            <ul>
+              <li>Experiencia en conduccion estatal del trabajo electoral.</li>
+              <li>Continuidad dentro del sistema profesional del INE.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card3">
+      <div class="card-header" onclick="toggleCard('card3')">
+        <div class="card-type type-original">INE</div>
+        <div class="card-text">
+          <h3>Vocal Secretario de Junta Distrital Ejecutiva - INE, Oaxaca y Chiapas</h3>
+          <p>Desempeno distrital de abril de 2014 a abril de 2017 en organos desconcentrados del Instituto Nacional Electoral en dos entidades federativas.</p>
+          <div class="milestones">
+            <span class="milestone key">Abr 2014 - Abr 2017</span>
+            <span class="milestone">Oaxaca</span>
+            <span class="milestone">Chiapas</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Funcion</h4>
+            <p>Seguimiento a tareas de secretaria, soporte juridico y administracion electoral en juntas distritales dentro de la etapa de consolidacion del INE.</p>
+          </div>
+          <div class="detail-block">
+            <h4>Valor institucional</h4>
+            <ul>
+              <li>Movilidad territorial y adaptacion operativa.</li>
+              <li>Experiencia en contexto de transicion institucional.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card4">
+      <div class="card-header" onclick="toggleCard('card4')">
+        <div class="card-type type-reenfocado">IFE</div>
+        <div class="card-text">
+          <h3>Vocal Secretario de Junta Distrital Ejecutiva - IFE, Chihuahua y Oaxaca</h3>
+          <p>Desempeno previo dentro del Instituto Federal Electoral entre mayo de 2011 y abril de 2014, con asignaciones en Chihuahua y Oaxaca.</p>
+          <div class="milestones">
+            <span class="milestone key">May 2011 - Abr 2014</span>
+            <span class="milestone">IFE</span>
+            <span class="milestone">Chihuahua</span>
+            <span class="milestone">Oaxaca</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Contexto</h4>
+            <p>Participacion en la fase previa a la transformacion del IFE hacia el INE, sumando experiencia operativa y juridica en juntas distritales.</p>
+          </div>
+          <div class="detail-block">
+            <h4>Resultado</h4>
+            <ul>
+              <li>Base de trayectoria especializada en materia electoral.</li>
+              <li>Continuidad dentro del sistema profesional del ramo.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card5">
+      <div class="card-header" onclick="toggleCard('card5')">
+        <div class="card-type type-nuevo">Academia</div>
+        <div class="card-text">
+          <h3>Profesor de Tiempo Completo - Universidad Tecnologica de la Selva</h3>
+          <p>Actividad docente de enero de 2009 a abril de 2011, con perfil PROMEP y participacion en formacion profesional, proyectos de calidad y desarrollo tecnologico.</p>
+          <div class="milestones">
+            <span class="milestone key">2009 - 2011</span>
+            <span class="milestone">Perfil PROMEP</span>
+            <span class="milestone">Docencia TI</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Materias impartidas</h4>
+            <ul>
+              <li>Administracion de Proyectos de Tecnologias de la Informacion I y II.</li>
+              <li>Auditoria de sistemas de Tecnologias de la Informacion.</li>
+              <li>Programacion de Aplicaciones.</li>
+              <li>Desarrollo de Aplicaciones Web, entre otras.</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>Proyectos destacados</h4>
+            <ul>
+              <li>Sistematizacion de procesos de gestion de calidad, incluido el seguimiento de tutorias.</li>
+              <li>Administracion de la plataforma MOODLE para educacion a distancia.</li>
+              <li>Encargado del laboratorio de robotica pedagogica educativa.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card6">
+      <div class="card-header" onclick="toggleCard('card6')">
+        <div class="card-type type-original">Innovacion</div>
+        <div class="card-text">
+          <h3>Proyectos aplicados, investigacion y logros</h3>
+          <p>Desarrollo de proyectos tecnologicos y academicos vinculados con robotica educativa, automatizacion y publicacion de resultados.</p>
+          <div class="milestones">
+            <span class="milestone key">Dallas, TX</span>
+            <span class="milestone">ASP.NET</span>
+            <span class="milestone">ISBN</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Hitos</h4>
+            <ul>
+              <li>Tercer lugar mundial en competencia de robotica en Dallas, Texas, Estados Unidos.</li>
+              <li>Desarrollo de prototipo para alimentacion remota de animales domesticos mediante sistema web en ASP.NET.</li>
+              <li>Presentacion del proyecto en el 4° Simposio Internacional de Sistemas Telematicos y Organizaciones Inteligentes, noviembre de 2009.</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>Produccion derivada</h4>
+            <p>El trabajo se articulo con resultados de investigacion aplicada y publicaciones en libro electronico con ISBN, reforzando el cruce entre tecnologia, docencia e innovacion.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="bloque" id="bloque2">
+    <div class="bloque-header">
+      <div class="bloque-num">02</div>
+      <div class="bloque-info">
+        <h2>Formacion academica</h2>
+        <p>Trayectoria formativa que articula derecho, administracion empresarial, ingenieria en sistemas y especializacion en investigacion de operaciones.</p>
+      </div>
+      <div class="bloque-count">4 grados</div>
+    </div>
+
+    <article class="timeline-card open" id="card7">
+      <div class="card-header" onclick="toggleCard('card7')">
+        <div class="card-type type-original">Derecho</div>
+        <div class="card-text">
+          <h3>Licenciatura en Derecho - UNADM</h3>
+          <p>Formacion juridica con titulo y cedula profesional No. 612301, alineada con la trayectoria profesional en materia electoral y administracion publica.</p>
+          <div class="milestones">
+            <span class="milestone key">UNADM</span>
+            <span class="milestone">Titulo</span>
+            <span class="milestone">Cedula No. 612301</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Valor profesional</h4>
+            <p>Refuerza el componente normativo y de argumentacion juridica requerido para el ejercicio de funciones directivas y secretariales en el sistema electoral.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card8">
+      <div class="card-header" onclick="toggleCard('card8')">
+        <div class="card-type type-nuevo">Posgrado</div>
+        <div class="card-text">
+          <h3>Maestria en Administracion Empresarial - ITESM Campus Virtual</h3>
+          <p>Estudios de posgrado concluidos en diciembre de 2013, orientados a gestion, administracion y toma de decisiones organizacionales.</p>
+          <div class="milestones">
+            <span class="milestone key">Dic 2013</span>
+            <span class="milestone">ITESM</span>
+            <span class="milestone">Administracion</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Aporte</h4>
+            <p>Complementa la experiencia operativa con herramientas de gestion institucional, liderazgo y administracion de recursos en entornos complejos.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card9">
+      <div class="card-header" onclick="toggleCard('card9')">
+        <div class="card-type type-original">Posgrado</div>
+        <div class="card-text">
+          <h3>Maestria en Ingenieria de Sistemas de Informacion y Transporte - UVM Chiapas</h3>
+          <p>Programa enfocado al area de investigacion de operaciones, con grado y cedula, orientado a analisis, optimizacion y sistemas de informacion.</p>
+          <div class="milestones">
+            <span class="milestone key">UVM Chiapas</span>
+            <span class="milestone">Grado</span>
+            <span class="milestone">Cedula</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Especializacion</h4>
+            <p>La orientacion hacia investigacion de operaciones conecta con la experiencia en sistematizacion de procesos, desarrollo de soluciones y formacion tecnica.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card10">
+      <div class="card-header" onclick="toggleCard('card10')">
+        <div class="card-type type-reenfocado">Base tecnica</div>
+        <div class="card-text">
+          <h3>Ingenieria en Sistemas Computacionales</h3>
+          <p>Formacion profesional con titulo y cedula, base tecnica de la experiencia en desarrollo web, administracion de plataformas y proyectos tecnologicos.</p>
+          <div class="milestones">
+            <span class="milestone key">Ingenieria</span>
+            <span class="milestone">Titulo</span>
+            <span class="milestone">Cedula</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Linea de continuidad</h4>
+            <p>Da sustento a la docencia en tecnologias de la informacion, la operacion de MOODLE, el desarrollo en ASP.NET y la participacion en proyectos aplicados.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="bloque" id="bloque3">
+    <div class="bloque-header">
+      <div class="bloque-num">03</div>
+      <div class="bloque-info">
+        <h2>Cursos y certificaciones</h2>
+        <p>Actualizacion continua en derecho electoral, formacion docente, diseno instruccional, robotica educativa, idiomas y desarrollo de aplicaciones.</p>
+      </div>
+      <div class="bloque-count">4 conjuntos</div>
+    </div>
+
+    <article class="timeline-card open" id="card11">
+      <div class="card-header" onclick="toggleCard('card11')">
+        <div class="card-type type-original">Electoral</div>
+        <div class="card-text">
+          <h3>Formacion especializada en materia electoral</h3>
+          <p>Capacitacion sostenida durante la trayectoria como funcionario electoral en procedimientos, impugnacion, cultura democratica y derecho electoral.</p>
+          <div class="milestones">
+            <span class="milestone key">TEPJF</span>
+            <span class="milestone">IFE / INE</span>
+            <span class="milestone">Actualizacion continua</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Temas cursados</h4>
+            <ul>
+              <li>Organizacion Administrativa del IFE.</li>
+              <li>Procedimiento Especial Sancionador.</li>
+              <li>Procedimiento Ordinario Sancionador.</li>
+              <li>Medios de Impugnacion.</li>
+              <li>Comunicacion politica, confianza e instituciones electorales.</li>
+              <li>Cultura democratica.</li>
+              <li>Diplomado en Derecho Electoral impartido por el TEPJF.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card12">
+      <div class="card-header" onclick="toggleCard('card12')">
+        <div class="card-type type-nuevo">Docencia</div>
+        <div class="card-text">
+          <h3>Formacion docente y basada en competencias</h3>
+          <p>Cursos y talleres orientados a aprendizaje significativo, diseno instruccional, taxonomia cognitiva y consolidacion de cuerpos academicos.</p>
+          <div class="milestones">
+            <span class="milestone key">2007 - 2010</span>
+            <span class="milestone">UT Selva</span>
+            <span class="milestone">Competencias</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Cursos relevantes</h4>
+            <ul>
+              <li>Taller Herramientas Metodologicas para la Formacion Basada en Competencias Profesionales, agosto de 2010, 40 horas.</li>
+              <li>Taller Diseno Instruccional, agosto de 2009.</li>
+              <li>Curso-taller Transito a la consolidacion de Cuerpos Academicos, julio de 2009.</li>
+              <li>Taller de elaboracion de reactivos con base en la Taxonomia de Benjamin Bloom, enero de 2009.</li>
+              <li>Curso Diseno de Mecanismos de Evaluacion para comprobar Aprendizaje Significativo, agosto de 2007.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card13">
+      <div class="card-header" onclick="toggleCard('card13')">
+        <div class="card-type type-original">Tecnologia</div>
+        <div class="card-text">
+          <h3>Robotica, desarrollo y certificaciones tecnicas</h3>
+          <p>Actualizacion profesional en robotica educativa, negocios de TI y desarrollo de aplicaciones basadas en ASP.NET.</p>
+          <div class="milestones">
+            <span class="milestone key">Carnegie Mellon</span>
+            <span class="milestone">Microsoft</span>
+            <span class="milestone">ITESM</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Referencias</h4>
+            <ul>
+              <li>VEX Robotics Teacher Training Professional Development Course, Carnegie Mellon University, julio de 2010.</li>
+              <li>Diplomado en Desarrollo de Negocios en Tecnologias de la Informacion, ITESM campus Chiapas, concluido en junio de 2006.</li>
+              <li>Microsoft Certified Application Developer, enfocado en aplicaciones basadas en ASP.NET, obtenido en 2006.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card14">
+      <div class="card-header" onclick="toggleCard('card14')">
+        <div class="card-type type-reenfocado">Idiomas</div>
+        <div class="card-text">
+          <h3>Formacion complementaria en idiomas y psicologia educativa</h3>
+          <p>Trayectoria complementaria en capacitacion para la docencia y dominio del ingles con enfoque aplicado.</p>
+          <div class="milestones">
+            <span class="milestone key">2003 - 2004</span>
+            <span class="milestone">Harmon Hall</span>
+            <span class="milestone">CONALEP</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Complementos</h4>
+            <ul>
+              <li>Curso de Psicologia educativa impartido por CONALEP a traves de su centro de capacitacion laboral.</li>
+              <li>Tecnico en Idiomas con especialidad en Ingles, obtenido en el Instituto Harmon Hall de Tuxtla Gutierrez en 2003.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="bloque" id="bloque4">
+    <div class="bloque-header">
+      <div class="bloque-num">04</div>
+      <div class="bloque-info">
+        <h2>Docencia, conferencias y publicaciones</h2>
+        <p>Participacion como ponente, formador y autor en espacios academicos vinculados con tecnologia, robotica y sistemas de informacion.</p>
+      </div>
+      <div class="bloque-count">4 aportes</div>
+    </div>
+
+    <article class="timeline-card open" id="card15">
+      <div class="card-header" onclick="toggleCard('card15')">
+        <div class="card-type type-original">Ponencia</div>
+        <div class="card-text">
+          <h3>Robotica: Una experiencia de programacion aplicada en la UTSELVA</h3>
+          <p>Ponencia presentada en el marco del VI Simposio de Tecnologias de la Informacion y Comunicacion el 17 de noviembre de 2010.</p>
+          <div class="milestones">
+            <span class="milestone key">2010</span>
+            <span class="milestone">UTSELVA</span>
+            <span class="milestone">Robotica</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Contexto</h4>
+            <p>La exposicion da cuenta de experiencia aplicada en programacion y robotica educativa dentro del entorno universitario.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card16">
+      <div class="card-header" onclick="toggleCard('card16')">
+        <div class="card-type type-nuevo">Congreso</div>
+        <div class="card-text">
+          <h3>Ponente en Congreso ANIEI 2009</h3>
+          <p>Participacion en el XXII Congreso Nacional y VIII Congreso Internacional de Informatica y Computacion ANIEI con el tema sobre avance programatico planificado y sistemas de informacion.</p>
+          <div class="milestones">
+            <span class="milestone key">2009</span>
+            <span class="milestone">ANIEI</span>
+            <span class="milestone">Sistemas de informacion</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Tema</h4>
+            <p>Mejorando la creacion del avance programatico planificado utilizando Sistemas de Informacion.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card17">
+      <div class="card-header" onclick="toggleCard('card17')">
+        <div class="card-type type-original">Curso impartido</div>
+        <div class="card-text">
+          <h3>ASP.NET con SQL Server</h3>
+          <p>Imparticion de curso de educacion continua el 19 de junio de 2009 en las instalaciones de la Universidad Tecnologica de la Selva.</p>
+          <div class="milestones">
+            <span class="milestone key">19 Jun 2009</span>
+            <span class="milestone">Educacion continua</span>
+            <span class="milestone">ASP.NET</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Alcance</h4>
+            <p>Actividad formativa enfocada en desarrollo de aplicaciones y bases de datos, alineada con la experiencia tecnica del perfil.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="timeline-card" id="card18">
+      <div class="card-header" onclick="toggleCard('card18')">
+        <div class="card-type type-reenfocado">Publicaciones</div>
+        <div class="card-text">
+          <h3>Articulos publicados en libro electronico</h3>
+          <p>Produccion academica con resultados en libros electronicos con ISBN, vinculada a sistemas de informacion y tecnologia web aplicada al control de dispositivos.</p>
+          <div class="milestones">
+            <span class="milestone key">ISBN 978-607-7854-36</span>
+            <span class="milestone">ISBN 978-607-95043-2-8</span>
+          </div>
+        </div>
+        <div class="card-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+      <div class="timeline-container">
+        <div class="detail-grid">
+          <div class="detail-block">
+            <h4>Textos referidos</h4>
+            <ul>
+              <li>Mejorando la creacion del avance programatico planificado utilizando Sistemas de Informacion.</li>
+              <li>Aplicacion de la tecnologia web como interfaz para el control de dispositivos electronicos.</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <h4>Proyeccion</h4>
+            <p>Estas publicaciones muestran capacidad para documentar experiencias tecnicas y convertirlas en productos academicos con circulacion formal.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Curriculum profesional</h3>
+      <p>Landing editorial elaborada a partir de la informacion curricular compartida por Iram Yovan Sanchez Gomez. La estructura organiza formacion, experiencia, actualizacion profesional y produccion academica en un formato web de consulta rapida.</p>
+      <div class="footer-gold-line"></div>
+      <p>Perfil con cruces entre derecho electoral, gestion institucional, docencia y tecnologia aplicada.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Navegacion</h4>
+      <ul>
+        <li><a href="#bloque1">Trayectoria profesional</a></li>
+        <li><a href="#bloque2">Formacion academica</a></li>
+        <li><a href="#bloque3">Cursos y certificaciones</a></li>
+        <li><a href="#bloque4">Docencia y publicaciones</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    <span>Ocosingo, Chiapas - referencia curricular fechada el 16 de junio de 2024</span>
+    <span>Diseno editorial para consulta web</span>
+  </div>
+</footer>
+
+<script>
+  function toggleCard(id) {
+    const card = document.getElementById(id);
+    if (card) {
+      card.classList.toggle("open");
+    }
+  }
+
+  const sections = document.querySelectorAll(".bloque");
+  const navLinks = document.querySelectorAll(".blocks-nav a");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+      });
+    });
+  }, {
+    rootMargin: "-30% 0px -55% 0px",
+    threshold: 0.01
+  });
+
+  sections.forEach((section) => observer.observe(section));
+</script>
+
+</body>
+</html>
