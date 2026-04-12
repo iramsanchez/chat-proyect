@@ -302,6 +302,39 @@
     padding-left: 1rem;
   }
 
+  .intro-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.9rem;
+    padding: 10px 22px;
+    background: var(--ine-burgundy);
+    color: var(--ine-white);
+    border: none;
+    border-radius: 3px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 2px 8px rgba(107,26,42,0.2);
+  }
+
+  .intro-cta:hover {
+    background: #7d2234;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(107,26,42,0.3);
+  }
+
+  .intro-cta svg {
+    width: 16px; height: 16px;
+    stroke: var(--ine-gold-light);
+    fill: none;
+    stroke-width: 2;
+  }
+
   /* ===== MAIN ===== */
   main {
     max-width: 1200px;
@@ -473,269 +506,271 @@
     border-color: rgba(107,26,42,0.18);
   }
 
-  /* ===== TOPIC SECTIONS ===== */
-  .topic-section {
-    margin-bottom: 2.5rem;
+  /* ===== TOPIC LABEL ===== */
+  .topic-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    padding: 8px 18px;
+    background: var(--ine-dark);
+    border-radius: 3px;
+    color: var(--ine-white);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
   }
 
-  .topic-header {
+  .topic-label-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--ine-gold);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  /* ===== FEATURED PUB CARD ===== */
+  .pub-featured {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--ine-white);
+    border: 1px solid rgba(107,26,42,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5rem;
+  }
+
+  .pub-featured:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .pub-featured-banner {
+    position: relative;
+    background: linear-gradient(135deg, var(--ine-burgundy) 0%, #8B2340 40%, var(--ine-dark) 100%);
+    padding: 2rem 2rem 1.8rem;
+    overflow: hidden;
+  }
+
+  .pub-featured-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #fff 0px, #fff 1px,
+      transparent 1px, transparent 20px
+    );
+  }
+
+  .pub-featured-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--ine-gold) 0%, var(--ine-gold-light) 50%, var(--ine-gold) 100%);
+  }
+
+  .pub-featured-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: rgba(200,168,75,0.18);
+    border: 1px solid rgba(200,168,75,0.35);
+    border-radius: 2px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ine-gold-light);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .pub-featured-category span {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--ine-gold);
+  }
+
+  .pub-featured-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 700;
+    color: var(--ine-white);
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+    position: relative;
+  }
+
+  .pub-featured-banner p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.72);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 700px;
+    position: relative;
+  }
+
+  .pub-featured-body {
+    padding: 1.5rem 2rem;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.9rem 1.25rem;
-    background: var(--ine-dark);
-    border-radius: 4px 4px 0 0;
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.2s;
+    gap: 1.5rem;
   }
 
-  .topic-header:hover {
-    background: var(--ine-gray-dark);
+  .pub-featured-stats {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    flex-wrap: wrap;
   }
 
-  .topic-icon {
-    width: 32px; height: 32px;
+  .pub-feat-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pub-feat-stat-icon {
+    width: 34px; height: 34px;
     border-radius: 50%;
+    background: rgba(107,26,42,0.06);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--ine-burgundy);
-    flex-shrink: 0;
   }
 
-  .topic-icon svg {
+  .pub-feat-stat-icon svg {
     width: 16px; height: 16px;
-    stroke: var(--ine-gold-light);
+    stroke: var(--ine-burgundy);
     fill: none;
     stroke-width: 1.8;
   }
 
-  .topic-info {
-    flex: 1;
-  }
-
-  .topic-info h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--ine-white);
+  .pub-feat-stat-text {
+    font-size: 0.78rem;
+    color: var(--ine-gray-mid);
     line-height: 1.3;
   }
 
-  .topic-info span {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.5);
-    font-weight: 300;
-  }
-
-  .topic-badge {
-    background: rgba(200,168,75,0.15);
-    border: 1px solid rgba(200,168,75,0.3);
-    color: var(--ine-gold-light);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 2px;
-    white-space: nowrap;
-  }
-
-  .topic-toggle {
-    width: 26px; height: 26px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,0.08);
-    transition: background 0.2s, transform 0.3s;
-    flex-shrink: 0;
-  }
-
-  .topic-toggle svg {
-    width: 14px; height: 14px;
-    stroke: rgba(255,255,255,0.6);
-    fill: none;
-    stroke-width: 2;
-    transition: transform 0.3s, stroke 0.3s;
-  }
-
-  .topic-section.open .topic-toggle {
-    background: var(--ine-burgundy);
-  }
-
-  .topic-section.open .topic-toggle svg {
-    transform: rotate(180deg);
-    stroke: var(--ine-gold-light);
-  }
-
-  .topic-body {
-    display: none;
-    background: var(--ine-white);
-    border: 1px solid rgba(107,26,42,0.1);
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    padding: 1.5rem 1.75rem;
-  }
-
-  .topic-section.open .topic-body {
+  .pub-feat-stat-text strong {
     display: block;
-  }
-
-  /* Publication items */
-  .pub-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid rgba(107,26,42,0.06);
-    transition: padding-left 0.2s;
-  }
-
-  .pub-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .pub-item:first-child {
-    padding-top: 0;
-  }
-
-  .pub-item:hover {
-    padding-left: 0.5rem;
-  }
-
-  .pub-marker {
-    width: 42px; height: 42px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .pub-marker.electoral {
-    background: rgba(107,26,42,0.08);
-  }
-
-  .pub-marker.electoral svg {
-    stroke: var(--ine-burgundy);
-  }
-
-  .pub-marker svg {
-    width: 20px; height: 20px;
-    fill: none;
-    stroke-width: 1.6;
-  }
-
-  .pub-content {
-    flex: 1;
-  }
-
-  .pub-content h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--ine-dark);
-    margin-bottom: 0.25rem;
-    line-height: 1.35;
-  }
-
-  .pub-content h4 a {
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .pub-content h4 a:hover {
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--ine-burgundy);
   }
 
-  .pub-content p {
+  .pub-featured-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: var(--ine-burgundy);
+    color: var(--ine-white);
+    border-radius: 3px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 2px 10px rgba(107,26,42,0.2);
+    flex-shrink: 0;
+  }
+
+  .pub-featured:hover .pub-featured-cta {
+    background: #7d2234;
+    transform: translateX(3px);
+    box-shadow: 0 4px 18px rgba(107,26,42,0.3);
+  }
+
+  .pub-featured-cta svg {
+    width: 14px; height: 14px;
+    stroke: var(--ine-gold-light);
+    fill: none;
+    stroke-width: 2;
+    transition: transform 0.2s;
+  }
+
+  .pub-featured:hover .pub-featured-cta svg {
+    transform: translateX(2px);
+  }
+
+  .pub-featured-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 1rem;
+    position: relative;
+  }
+
+  .pub-feat-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .pub-feat-tag.highlight {
+    background: rgba(200,168,75,0.2);
+    color: var(--ine-gold-light);
+    border-color: rgba(200,168,75,0.3);
+  }
+
+  /* Upcoming topic placeholder */
+  .pub-upcoming {
+    background: var(--ine-white);
+    border: 2px dashed rgba(107,26,42,0.12);
+    border-radius: 6px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .pub-upcoming-icon {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: rgba(200,168,75,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+  }
+
+  .pub-upcoming-icon svg {
+    width: 24px; height: 24px;
+    stroke: var(--ine-gold-dark);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .pub-upcoming h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ine-dark);
+    margin-bottom: 0.35rem;
+  }
+
+  .pub-upcoming p {
     font-size: 0.85rem;
     color: var(--ine-gray-mid);
     font-weight: 300;
-    line-height: 1.55;
-  }
-
-  .pub-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 0.6rem;
-  }
-
-  .pub-tag {
-    font-size: 0.68rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background: var(--ine-gray-light);
-    color: var(--ine-gray-mid);
-    border: 1px solid rgba(107,26,42,0.06);
-  }
-
-  .pub-tag.active {
-    background: rgba(107,26,42,0.07);
-    color: var(--ine-burgundy);
-    border-color: rgba(107,26,42,0.15);
-  }
-
-  .pub-arrow {
-    flex-shrink: 0;
-    width: 32px; height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--ine-gray-light);
-    margin-top: 4px;
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .pub-arrow svg {
-    width: 14px; height: 14px;
-    stroke: var(--ine-gray-mid);
-    fill: none;
-    stroke-width: 2;
-  }
-
-  .pub-item:hover .pub-arrow {
-    background: var(--ine-burgundy);
-    transform: translateX(3px);
-  }
-
-  .pub-item:hover .pub-arrow svg {
-    stroke: var(--ine-white);
-  }
-
-  /* Empty topic state */
-  .topic-empty {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: var(--ine-gray-mid);
-  }
-
-  .topic-empty svg {
-    width: 36px; height: 36px;
-    stroke: rgba(107,26,42,0.2);
-    fill: none;
-    stroke-width: 1.2;
-    margin-bottom: 0.75rem;
-  }
-
-  .topic-empty h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--ine-burgundy);
-    margin-bottom: 0.3rem;
-  }
-
-  .topic-empty p {
-    font-size: 0.82rem;
-    font-weight: 300;
+    max-width: 420px;
+    margin: 0 auto;
   }
 
   /* ===== FOOTER ===== */
@@ -938,6 +973,11 @@
     <div class="intro-divider"></div>
     <div class="intro-text">
       Trayectoria que integra función pública electoral, dirección distrital, docencia universitaria, formación jurídica y desarrollo de proyectos académicos y tecnológicos.
+      <br>
+      <a href="curriculum-iram-sanchez.html" class="intro-cta">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Ver curriculum completo
+      </a>
     </div>
   </div>
 </div>
@@ -1119,64 +1159,62 @@
     </div>
 
     <!-- TEMA: Político-Electoral -->
-    <div class="topic-section open" id="topic-electoral">
-      <div class="topic-header" onclick="toggleTopic('topic-electoral')">
-        <div class="topic-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="topic-info">
-          <h3>Político-Electoral</h3>
-          <span>Análisis, timelines y recursos sobre el sistema electoral mexicano</span>
-        </div>
-        <div class="topic-badge">1 publicación</div>
-        <div class="topic-toggle">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    <div class="topic-label"><div class="topic-label-dot"></div> Tema: Político-Electoral</div>
+
+    <a href="reformas-electorales.html" class="pub-featured">
+      <div class="pub-featured-banner">
+        <div class="pub-featured-category"><span></span> Divulgación electoral</div>
+        <h3>Historia de las Reformas Electorales en México</h3>
+        <p>Análisis cronológico y temático de la evolución del sistema electoral mexicano: de las Juntas Computadoras de 1917 al Instituto Nacional Electoral de 2014.</p>
+        <div class="pub-featured-tags">
+          <span class="pub-feat-tag highlight">Timelines interactivos</span>
+          <span class="pub-feat-tag">Reformas constitucionales</span>
+          <span class="pub-feat-tag">INE · IFE</span>
+          <span class="pub-feat-tag">TEPJF</span>
+          <span class="pub-feat-tag">1917 — 2014</span>
         </div>
       </div>
-      <div class="topic-body">
-        <div class="pub-item">
-          <div class="pub-marker electoral">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="pub-content">
-            <h4><a href="reformas-electorales.html">Historia de las Reformas Electorales en México</a></h4>
-            <p>Análisis cronológico y temático de la evolución del sistema electoral mexicano: de las Juntas Computadoras de 1917 al Instituto Nacional Electoral de 2014. Incluye 11 timelines interactivos organizados en 4 bloques analíticos.</p>
-            <div class="pub-tags">
-              <span class="pub-tag active">Timelines interactivos</span>
-              <span class="pub-tag">Reformas constitucionales</span>
-              <span class="pub-tag">INE · IFE</span>
-              <span class="pub-tag">TEPJF</span>
+      <div class="pub-featured-body">
+        <div class="pub-featured-stats">
+          <div class="pub-feat-stat">
+            <div class="pub-feat-stat-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="pub-feat-stat-text">
+              <strong>11</strong> Timelines
             </div>
           </div>
-          <a href="reformas-electorales.html" class="pub-arrow" title="Ver publicación">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
+          <div class="pub-feat-stat">
+            <div class="pub-feat-stat-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <div class="pub-feat-stat-text">
+              <strong>4</strong> Bloques analíticos
+            </div>
+          </div>
+          <div class="pub-feat-stat">
+            <div class="pub-feat-stat-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div class="pub-feat-stat-text">
+              <strong>107</strong> Años de historia
+            </div>
+          </div>
+        </div>
+        <div class="pub-featured-cta">
+          Explorar
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
-    </div>
+    </a>
 
-    <!-- TEMA: Próximamente (placeholder para futuros temas) -->
-    <div class="topic-section" id="topic-otros">
-      <div class="topic-header" onclick="toggleTopic('topic-otros')">
-        <div class="topic-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        </div>
-        <div class="topic-info">
-          <h3>Más temas próximamente</h3>
-          <span>Nuevas áreas de contenido en desarrollo</span>
-        </div>
-        <div class="topic-badge">Próximamente</div>
-        <div class="topic-toggle">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
+    <!-- Placeholder para más temas -->
+    <div class="pub-upcoming">
+      <div class="pub-upcoming-icon">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
       </div>
-      <div class="topic-body">
-        <div class="topic-empty">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          <h4>En preparación</h4>
-          <p>Se agregarán nuevos temas y publicaciones conforme estén disponibles.</p>
-        </div>
-      </div>
+      <h4>Más temas y publicaciones próximamente</h4>
+      <p>Se agregarán nuevas áreas temáticas y contenidos conforme estén disponibles.</p>
     </div>
   </section>
 
@@ -1208,10 +1246,6 @@
 </footer>
 
 <script>
-  function toggleTopic(id) {
-    const section = document.getElementById(id);
-    if (section) section.classList.toggle('open');
-  }
 
   // Active nav on scroll
   const sections = document.querySelectorAll('section.bloque');
