@@ -881,13 +881,16 @@
         </div>
       </div>
       <div class="timeline-container">
-        <div class="coming-soon">
-          <div class="coming-soon-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h4>Timeline en preparación</h4>
-          <p>Este timeline será publicado próximamente con la evolución detallada del Consejo General.</p>
+        <div class="timeline-loader" id="loader-tc5">
+          <div class="timeline-loader-icon"></div>
+          Cargando línea de tiempo…
         </div>
+        <iframe
+          src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vTwCDEUEbmldudYZVsY0WYmorYrxTowNjjcGgn8VDacPcs-vjMCGUA8s-gIkBv4iBXJHIB7e9WUPWiY&font=Default&lang=en&initial_zoom=2&width=100%25&height=800"
+          onload="hideLoader('loader-tc5')"
+          title="Timeline: Consejo General – composición y autonomía"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </section>
