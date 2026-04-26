@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reformas Electorales en México — Grandes Cambios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #0C0F1A;
+  --bg2:       #131728;
+  --bg3:       #1A1E30;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.12);
+  --gold:      #D4A853;
+  --gold2:     #F0C87A;
+  --text:      #E8EAF0;
+  --text2:     #9298B0;
+  --text3:     #5C6280;
+  --accent:    #4E8FE8;
+  --red:       #C0392B;
+
+  --t1: #3A6B9F;   /* Autoridades */
+  --t2: #4A6080;   /* Marcos Legales */
+  --t3: #2D6E55;   /* Estados */
+  --t4: #6B3070;   /* Contencioso */
+  --t5: #2E5A82;   /* Consejo General */
+  --t6: #8B3A4A;   /* Partidos */
+  --t7: #3A6560;   /* Financiamiento */
+  --t8: #3D6050;   /* Cámaras */
+  --t9: #8B5A1A;   /* Participación */
+  --t10:#1A5282;   /* Transparencia */
+  --t11:#2A2A4A;   /* IFE-INE */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before {
+  content:'';
+  position:fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:1000;
+}
+
+/* ── HEADER ── */
+header {
+  position: relative;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(212,168,83,0.12) 0%, transparent 70%);
+  overflow: hidden;
+}
+header::after {
+  content:'';
+  position:absolute; bottom:-1px; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.header-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #F0E6C8 0%, var(--gold) 50%, #C8A040 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+.header-sub {
+  font-size: 1rem;
+  color: var(--text2);
+  font-weight: 300;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+.header-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.stat {
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+/* ── CONTROLS ── */
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13,15,26,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+}
+.controls-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+.search-wrap svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text3);
+  pointer-events: none;
+}
+#search {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 9px 12px 9px 36px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  outline: none;
+  transition: border-color .2s;
+}
+#search:focus { border-color: var(--gold); }
+#search::placeholder { color: var(--text3); }
+
+.view-btns {
+  display: flex;
+  gap: 4px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3px;
+}
+.view-btn {
+  background: none;
+  border: none;
+  color: var(--text3);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.view-btn.active {
+  background: var(--gold);
+  color: #0C0F1A;
+}
+
+.count-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap;
+  padding: 0 8px;
+}
+
+/* ── TOPIC FILTERS ── */
+.filters-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 0.5rem;
+}
+.filters-label {
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.filter-btn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.filter-btn .dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.filter-btn:hover { border-color: var(--border2); color: var(--text); }
+.filter-btn.active {
+  color: #0C0F1A;
+  border-color: transparent;
+  font-weight: 600;
+}
+.filter-btn.all-btn.active {
+  background: var(--gold);
+}
+
+/* ── MAIN CONTENT ── */
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+}
+
+/* ── TIMELINE VIEW ── */
+#timeline-view { display: block; }
+#grid-view { display: none; }
+
+.decade-section { margin-bottom: 3.5rem; }
+.decade-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.decade-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--bg3);
+  line-height: 1;
+  user-select: none;
+  min-width: 120px;
+  text-align: right;
+  -webkit-text-stroke: 1px var(--border2);
+}
+.decade-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border2), transparent);
+}
+.decade-count {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+/* Timeline items */
+.tl-items {
+  display: grid;
+  gap: 10px;
+  padding-left: 2px;
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0;
+  position: relative;
+  animation: fadeUp .4s ease both;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(12px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.tl-year-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+}
+.tl-year {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text3);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 0.05em;
+}
+.tl-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 6px 0 0;
+  flex-shrink: 0;
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px currentColor;
+}
+.tl-line {
+  width: 1px;
+  flex: 1;
+  background: var(--border);
+  margin-top: 4px;
+  min-height: 16px;
+}
+.tl-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-left: 8px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+  overflow: hidden;
+}
+.tl-card::before {
+  content:'';
+  position:absolute; left:0; top:0; bottom:0;
+  width: 3px;
+  border-radius: 10px 0 0 10px;
+  background: currentColor;
+  opacity: 0.7;
+}
+.tl-card:hover {
+  border-color: var(--border2);
+  background: var(--bg3);
+  transform: translateX(3px);
+}
+.tl-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.tl-topic-tag {
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: currentColor;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tl-topic-tag span {
+  color: rgba(0,0,0,0.8);
+  font-weight: 500;
+}
+.tl-headline {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+  flex: 1;
+}
+.tl-summary {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── GRID VIEW ── */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+.grid-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp .35s ease both;
+}
+.grid-card::after {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height: 3px;
+  background: currentColor;
+  opacity: 0.8;
+  border-radius: 12px 12px 0 0;
+}
+.grid-card:hover {
+  border-color: var(--border2);
+  background: var(--bg3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.gc-year {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: currentColor;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.gc-year::after {
+  content:'';
+  flex:1;
+  height:1px;
+  background: currentColor;
+  opacity: 0.2;
+}
+.gc-headline {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.gc-topic {
+  font-size: 10px;
+  color: var(--text3);
+  font-family: 'DM Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.gc-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.7;
+}
+.gc-summary {
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.5;
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+  z-index: 500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalIn .25s ease;
+}
+@keyframes modalIn {
+  from { opacity:0; transform: scale(.96) translateY(8px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+.modal-header {
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.modal-year {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 6px;
+}
+.modal-topic-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.modal-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.modal-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .15s;
+}
+.modal-close:hover { background: var(--border2); color: var(--text); }
+.modal-body {
+  padding: 20px 24px 28px;
+}
+.modal-text {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+/* ── EMPTY STATE ── */
+.empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--text3);
+}
+.empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+.empty h3 { font-size: 1.1rem; color: var(--text2); margin-bottom: .5rem; }
+.empty p { font-size: 13px; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--text3);
+  font-size: 12px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, transparent, rgba(212,168,83,0.03));
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  header { padding: 3rem 1.5rem 2.5rem; }
+  .tl-item { grid-template-columns: 44px 1fr; }
+  .decade-num { font-size: 2.5rem; min-width: 80px; }
+  .grid-container { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-label">Proyecto Timelines Electorales · México</div>
+  <h1>Los Grandes Cambios<br>del Sistema Electoral</h1>
+  <p class="header-sub">152 eventos distribuidos en 11 timelines temáticos que narran un siglo de transformación democrática en México — de 1917 a 2014.</p>
+  <div class="header-stats">
+    <div class="stat"><span class="stat-num">152</span><span class="stat-label">Eventos</span></div>
+    <div class="stat"><span class="stat-num">11</span><span class="stat-label">Timelines</span></div>
+    <div class="stat"><span class="stat-num">97</span><span class="stat-label">Años cubiertos</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Fuentes primarias</span></div>
+  </div>
+</header>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="controls-inner">
+    <div class="search-wrap">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="search" placeholder="Buscar evento, año, tema…" autocomplete="off">
+    </div>
+    <div class="view-btns">
+      <button class="view-btn active" id="btn-timeline" onclick="setView('timeline')">Cronológico</button>
+      <button class="view-btn" id="btn-grid" onclick="setView('grid')">Mosaico</button>
+    </div>
+    <span class="count-badge" id="count-badge">152 eventos</span>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters-wrap">
+  <div class="filters-label">Filtrar por tema</div>
+  <div class="filters" id="filters"></div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div id="timeline-view"></div>
+  <div id="grid-view"></div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="modal-year" id="modal-year"></div>
+      <div class="modal-topic-tag" id="modal-topic"></div>
+      <div class="modal-headline" id="modal-headline"></div>
+      <button class="modal-close" onclick="closeModalDirect()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-text" id="modal-text"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Fuentes: José Woldenberg, Historia mínima de la transición democrática en México (El Colegio de México, 2012) · Exposición de Motivos LOPPE 1977 · Exposición de Motivos reforma constitucional 1996 (SCJN) · INE Timeline general de reformas electorales
+</footer>
+
+<script>
+// ── DATA ──
+const EVENTS = [{"year":1917,"headline":"Constitución de 1917: los primeros órganos electorales","summary":"La Constitución Política estableció a la Junta Empadronadora, las Juntas Computadoras Locales y los Colegios Electorales como los primeros órganos encargados de organizar y calificar las elecciones presidenciales y del Congreso. Bajo este modelo, eran los propios diputados y sena","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1917,"headline":"Constitución de 1917: el primer marco electoral de la República","summary":"La Constitución Política promulgada el 5 de febrero de 1917 establece el primer andamiaje legal del sistema electoral moderno. Define a México como república representativa, democrática y federal. Fija las bases para la elección de Presidente de la República, diputados y senadore","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1917,"headline":"Constitución de 1917: bases para el federalismo electoral","summary":"La Constitución de 1917 establece la forma republicana, representativa y federal de gobierno. Cada estado tiene su propia constitución y organiza sus elecciones locales de manera autónoma. Sin embargo, en la práctica, el sistema político centralizado que emerge desde la posrevolu","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1917,"headline":"Constitución de 1917: la autocalificación y los Colegios Electorales","summary":"La Constitución de 1917 consagra el sistema de autocalificación electoral: los propios diputados y senadores electos se erigen en Colegio Electoral para validar sus propias elecciones, y la Cámara de Diputados constituida en Colegio Electoral califica también la elección presiden","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1917,"headline":"1917: la Constitución establece el sistema de mayoría relativa pura","summary":"La Constitución Política de 1917 diseña las dos Cámaras del Congreso de la Unión con un sistema de representación basado exclusivamente en la mayoría relativa:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1917,"headline":"1917: el sufragio constitucional — masculino, letrado y mayor de 21 años","summary":"La Constitución de 1917 establece el sufragio como derecho y obligación de los ciudadanos mexicanos, pero con restricciones significativas que excluyen a la mayoría de la población:","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1946,"headline":"Se crea la Comisión Federal de Vigilancia Electoral","summary":"El presidente Manuel Ávila Camacho promulga la Ley Federal Electoral, con la que nace la Comisión Federal de Vigilancia Electoral (CFVE), primer órgano federal específicamente creado para coordinar y vigilar los procesos electorales. Quedó integrada por el Secretario de Gobernaci","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1946,"headline":"Ley Federal Electoral de 1946: el primer marco legal moderno","summary":"El presidente Manuel Ávila Camacho promulga la primera Ley Federal Electoral de la era moderna. Sus innovaciones:","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1946,"headline":"Ley Federal Electoral de 1946: se crean las Comisiones Electorales Locales","summary":"La Ley Federal Electoral de 1946 crea formalmente las Comisiones Electorales Locales en cada entidad federativa, con el mandato de apoyar la organización de los procesos electorales federales en los estados. Es el primer piso de una estructura electoral con presencia territorial.","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1946,"headline":"Ley Federal Electoral de 1946: primeros recursos de impugnación formales","summary":"La Ley Federal Electoral de 1946 establece por primera vez recursos formales de impugnación dentro del proceso electoral, aunque sin un órgano jurisdiccional independiente para resolverlos. Los partidos pueden presentar inconformidades ante la Comisión Federal de Vigilancia Elect","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1946,"headline":"1946: la Comisión Federal de Vigilancia Electoral — el Secretario de Gobernación al mando","summary":"La Ley Federal Electoral de 1946 crea la Comisión Federal de Vigilancia Electoral (CFVE), antecesora directa del Consejo General. Su composición original:","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1946,"headline":"1946: la Ley Federal Electoral y el control del registro de partidos","summary":"La Ley Federal Electoral de 1946 centraliza el registro de los partidos políticos en la Comisión Federal de Vigilancia Electoral, presidida por el Secretario de Gobernación. Para obtener reconocimiento legal, las organizaciones deben cumplir requisitos estrictos que el gobierno p","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1951,"headline":"Nuevas atribuciones: arbitrar el registro de partidos políticos","summary":"El Congreso aprueba reformar la Ley Federal Electoral para ampliar las facultades de la Comisión Federal de Vigilancia Electoral: podrá arbitrar el registro de nuevos partidos políticos y emitir constancias de mayoría, consolidando su papel como autoridad electoral central.","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1951,"headline":"Reforma de 1951: registro de nuevos partidos y constancias de mayoría","summary":"El Congreso reforma la Ley Federal Electoral para otorgar a la Comisión Federal de Vigilancia Electoral la facultad de arbitrar el registro de nuevos partidos políticos y emitir constancias de mayoría. Es el primer ajuste significativo al marco legal electoral posconstitucional, ","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1953,"headline":"1953: las mujeres obtienen el derecho al voto — plena ciudadanía después de 36 años","summary":"El 17 de octubre de 1953 se publica en el Diario Oficial de la Federación la reforma al artículo 34 constitucional que otorga a las mujeres mexicanas el derecho al voto y a ser votadas en igualdad de condiciones que los hombres.","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1963,"headline":"1963: los 'diputados de partido', primer correctivo al monopolio electoral","summary":"Se introduce la figura de los 'diputados de partido': si un partido obtiene al menos 2.5% de la votación nacional, accede a cinco escaños en la Cámara de Diputados. Es el primer mecanismo que inyecta aunque sea mínimamente al pluralismo en la representación federal. En los estado","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1963,"headline":"1963: los 'diputados de partido' — primer correctivo al monopolio electoral","summary":"Se introduce la figura de los 'diputados de partido': si un partido obtiene al menos 2.5% de la votación nacional, accede automáticamente a cinco escaños. Por cada 0.5% adicional recibe un diputado más, hasta un tope de veinte. Es el primer mecanismo que garantiza una presencia m","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1963,"headline":"1963: los 'diputados de partido' — el primer correctivo al monopolio legislativo","summary":"La reforma constitucional de 1963 introduce la figura de los 'diputados de partido' como primer mecanismo para garantizar una presencia mínima de la oposición en la Cámara de Diputados:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1969,"headline":"1969: la mayoría de edad electoral baja a los 18 años","summary":"La reforma al artículo 34 constitucional de 1969 reduce la edad mínima para votar de 21 años (o 18 si se era casado) a 18 años para todos los ciudadanos, independientemente de su estado civil.","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1973,"headline":"De Comisión de Vigilancia a Comisión Federal Electoral","summary":"El Congreso suprime la Comisión Federal de Vigilancia Electoral y crea en su lugar la Comisión Federal Electoral (CFE). La gran diferencia: en este nuevo órgano todos los partidos políticos con registro legal participan con voz y voto, ampliando la representación plural en la aut","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1973,"headline":"Nueva Ley Federal Electoral de 1973: apertura al pluralismo","summary":"El Congreso aprueba una nueva Ley Federal Electoral que reemplaza la de 1946. Entre sus avances:","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1973,"headline":"1973: la Comisión Federal Electoral — todos los partidos con voz y voto","summary":"La nueva Ley Federal Electoral de 1973 crea la Comisión Federal Electoral (CFE), que amplía la representación de los partidos. Todos los partidos con registro legal participan ahora con voz y voto — no solo los del PRI.","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1976,"headline":"1976: el nadir de la competencia — un candidato presidencial único","summary":"En 1976 México celebra una elección presidencial sin competencia real. El PRI postula a José López Portillo; el PPS y el PARM se suman a su candidatura. El PAN no logra postular candidato propio porque en su XXVI Convención Extraordinaria del 25 de enero de 1976 ningún precandida","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1976,"headline":"1976: el Senado con 64 de 64 priistas — la representación en su punto más bajo","summary":"Las elecciones de 1976 ilustran el punto más bajo de la representación plural en el Congreso. El PRI gana 194 de las 196 diputaciones uninominales. En el Senado, con 64 escaños en juego, el resultado es contundente: el PRI obtiene los 64 de 64 — ningún opositor en la Cámara Alta.","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1977,"headline":"La LOPPE fortalece y reforma la Comisión Federal Electoral","summary":"La Ley de Organizaciones Políticas y Procesos Electorales (LOPPE), impulsada por Jesús Reyes Heroles y promovida por el presidente José López Portillo, rediseña las reglas de la Comisión Federal Electoral. Entre las innovaciones: los partidos con registro condicionado tendrán voz","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1977,"headline":"LOPPE: Ley de Organizaciones Políticas y Procesos Electorales","summary":"Aprobada el 27 de diciembre de 1977, la LOPPE es la reforma legal más trascendente desde 1946. Sus tres grandes aportes (fuente: Exposición de Motivos, López Portillo, 6 dic 1977; libro S7 — historia de la transición democrática):","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1977,"headline":"Reforma política de 1977: la apertura llega a los estados","summary":"La LOPPE de 1977 abre el sistema de partidos a nivel federal, pero su impacto también se siente gradualmente en los estados. Al permitir el registro de nuevos partidos (PCM, PDM, PST) y garantizarles representación en la Cámara de Diputados, crea las condiciones para que estas fu","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1977,"headline":"LOPPE 1977: el primer sistema contencioso electoral integral","summary":"La Ley de Organizaciones Políticas y Procesos Electorales (LOPPE), impulsada por Jesús Reyes Heroles, introduce por primera vez en la historia de México un sistema contencioso electoral propiamente dicho, con recursos diferenciados y plazos específicos (fuente: Exposición de Moti","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1977,"headline":"1977 — LOPPE: los partidos con registro condicionado ganan voz en la CFE","summary":"La LOPPE introduce un ajuste relevante en la Comisión Federal Electoral: los partidos con registro condicionado — los nuevos actores que la reforma abre al sistema — tendrán voz (pero no voto) en las sesiones de la CFE. Asimismo, el registro de partidos políticos, que hasta enton","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1977,"headline":"1977 — LOPPE: los partidos entran a la Constitución como 'entidades de interés público'","summary":"La Ley de Organizaciones Políticas y Procesos Electorales (LOPPE) introduce tres transformaciones fundamentales para los partidos y la competencia electoral:","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1977,"headline":"1977 — LOPPE: las primeras prerrogativas formales para los partidos","summary":"Antes de la LOPPE, los partidos recibían recursos públicos de manera discrecional y opaca, sin ninguna obligación de rendición de cuentas. La Ley de Organizaciones Políticas y Procesos Electorales establece por primera vez prerrogativas formales para todos los partidos con regist","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1977,"headline":"1977 — LOPPE: la Cámara de Diputados adopta el sistema mixto de representación","summary":"La LOPPE introduce la representación proporcional en la Cámara de Diputados por primera vez en la historia republicana de México. Como señala Woldenberg: 'Desde la primera Constitución republicana, la de 1824, el método para la conformación de la llamada Cámara Baja siempre había","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1977,"headline":"1977 — LOPPE: el sufragio efectivo como principio rector del sistema electoral","summary":"La Ley de Organizaciones Políticas y Procesos Electorales (LOPPE) de 1977 coloca el sufragio efectivo en el centro del sistema electoral. Como afirma la Exposición de Motivos firmada por López Portillo: 'Disponer de los recursos jurídicos adecuados para combatir las posibles viol","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1977,"headline":"1977 — LOPPE: el primer sistema formal de recursos y el primer conteo reglamentado","summary":"La Ley de Organizaciones Políticas y Procesos Electorales (LOPPE) de 1977 introduce, por primera vez, reglas formales sobre la transparencia del proceso electoral. La Exposición de Motivos firmada por López Portillo señala que el nuevo sistema contencioso electoral busca 'reducir","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":1979,"headline":"1979: el PCM gana su primer municipio — Alcozauca, Guerrero","summary":"Las elecciones del 1 de julio de 1979, primeras bajo la nueva LOPPE, marcan un hito local: el Partido Comunista Mexicano gana el municipio de Alcozauca, en la Montaña de Guerrero — el primero en la historia del PCM. El PAN, con mayor tradición municipal, también incrementa sus vi","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1979,"headline":"1979: siete partidos compiten — la pluralidad llega a la Cámara de Diputados","summary":"Las elecciones del 1 de julio de 1979 son las primeras bajo las reglas de la LOPPE. Tres nuevas organizaciones debutan gracias al registro condicionado: el Partido Comunista Mexicano (PCM), el Partido Demócrata Mexicano (PDM) y el Partido Socialista de los Trabajadores (PST). Se ","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1981,"headline":"1981–1982: el PSUM — primer gran intento de unificar la izquierda","summary":"El 6 de noviembre de 1981 nace el Partido Socialista Unificado de México (PSUM), resultado de la fusión del PCM, del Pueblo Mexicano (PPM), Socialista Revolucionario (PSR) y los movimientos de Acción Popular (MAP) y de Acción y Unidad Socialista (MAUS). Es el primer intento serio","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1982,"headline":"1982: el sistema circular — la CFE impugnada ante la CFE","summary":"En las elecciones generales de 1982 — las primeras federales completas bajo la LOPPE — queda expuesto el defecto fundamental del sistema de impugnación: si un partido no está de acuerdo con una resolución de la Comisión Federal Electoral, puede acudir a presentar su queja... ante","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1983,"headline":"1983: el PAN arrasa en Durango y Chihuahua — el pluralismo local se consolida","summary":"En 1983 el PAN obtiene victorias municipales históricas que sacuden el sistema. En Chihuahua gana no solo la capital sino también Ciudad Juárez, Camargo, Delicias, Casas Grandes, Parral, Meoqui y Saucillo. En Durango también triunfa en la capital estatal. Estos resultados demuest","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1986,"headline":"El Código Federal Electoral sustituye la LOPPE","summary":"Un nuevo Código Federal Electoral reemplaza la Ley Federal de Organizaciones Políticas y Procedimientos Electorales. Desaparece el registro condicionado de partidos, se precisa el acceso a medios de comunicación, y se definen con mayor claridad los recursos económicos de los part","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1986,"headline":"Código Federal Electoral de 1986: más representación, pero también retrocesos","summary":"El Código Federal Electoral reemplaza la LOPPE. Sus avances y retrocesos (fuente: libro S7, cap. 'De la reforma de 1986 a la crisis del partido hegemónico'):","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1986,"headline":"Chihuahua 1986: el fraude electoral que cimbró a México","summary":"El 6 de julio de 1986 se celebran elecciones en Chihuahua. El PAN postula a Francisco Barrio para gobernador. Según el testimonio del líder panista Luis H. Álvarez, el fraude fue masivo: representantes opositores expulsados de casillas, urnas 'embarazadas', casillas 'zapato' con ","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1986,"headline":"1986: nace el TRICOEL — el primer tribunal electoral de México","summary":"El Código Federal Electoral de 1986 crea el Tribunal de lo Contencioso Electoral (TRICOEL), el primer órgano jurisdiccional especializado en materia electoral de la historia de México. Es un paso histórico: por primera vez existe un tribunal con magistrados — no políticos — encar","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1986,"headline":"1986: la peor composición de la historia — el PRI con 16 votos contra 12 de la oposición","summary":"El Código Federal Electoral de 1986 rediseña la CFE de manera que concentra el poder más que nunca en el partido hegemónico. El presidente Miguel de la Madrid propone originalmente que solo seis figuras tengan voz y voto, pero los partidos pequeños — que perderían representación ","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1986,"headline":"1986: el Código Federal Electoral suprime el registro condicionado","summary":"El Código Federal Electoral de 1986 introduce cambios importantes en el régimen de partidos:","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1986,"headline":"1986: el Código Federal Electoral reglamenta las prerrogativas — pero sin fiscalización","summary":"El Código Federal Electoral de 1986 da un paso adelante al establecer que la administración de las prerrogativas de los partidos deja de ser discrecional: por primera vez se fijan reglas claras para el acceso a tiempos en medios de comunicación y para los recursos públicos.","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1986,"headline":"1986: 500 diputados y la polémica 'cláusula de gobernabilidad'","summary":"El Código Federal Electoral de 1986 amplía la Cámara de Diputados y modifica la fórmula de distribución de los escaños plurinominales, con resultados ambivalentes:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1987,"headline":"Representación proporcional en la Comisión Federal Electoral","summary":"El Congreso aprueba la reforma constitucional que introduce el criterio de representación proporcional en la integración de la Comisión Federal Electoral, anticipando los cambios más profundos que vendrían con la creación del IFE.","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1987,"headline":"1987–1988: la Corriente Democrática del PRI, el FDN y la crisis del sistema","summary":"En 1987 militantes destacados del PRI encabezados por Cuauhtémoc Cárdenas y Porfirio Muñoz Ledo exigen democratizar la selección del candidato presidencial. La respuesta de la dirigencia es un 'portazo'. Cárdenas abandona el PRI y suma a tres partidos satélite (PARM, PPS y PFCRN)","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1988,"headline":"1988: la crisis postelectoral federal acelera los cambios en los estados","summary":"Las elecciones presidenciales del 6 de julio de 1988 y la llamada 'caída del sistema' generan una crisis de legitimidad sin precedente. Si bien el conflicto es federal, su impacto en los estados es inmediato: los partidos de oposición — especialmente el recién creado FDN de Cuauh","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1988,"headline":"1988: la 'caída del sistema' evidencia la impotencia del contencioso electoral","summary":"El 6 de julio de 1988 se celebran las elecciones presidenciales más disputadas de la historia moderna. La misma noche, el sistema de cómputo de la CFE falla — la famosa 'caída del sistema'. Tres candidatos (Cárdenas, Clouthier e Ibarra de Piedra) firman esa noche un 'llamado a la","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1988,"headline":"1988: nace el PRD — la izquierda encuentra su cauce definitivo","summary":"El 21 de octubre de 1988, en una multitudinaria concentración en el D.F., Cuauhtémoc Cárdenas convoca a construir el Partido de la Revolución Democrática. En su discurso fundacional llama a crear 'una organización que sea la expresión política del cambio social y cultural que est","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1988,"headline":"1988: la Cámara más disputada — el PRI con solo 260 diputados, el Senado revela sus límites","summary":"Las elecciones del 6 de julio de 1988 producen la Cámara de Diputados más competida de la historia. Al PRI se le asigna 51.1% de la votación, que se traduce en 260 escaños. Al resto de los partidos, con 48.9% de los votos en conjunto, les corresponden 240 representantes — 'una di","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1988,"headline":"1988: la sociedad civil organizada exige transparencia electoral","summary":"Ante la ausencia de mecanismos institucionales de transparencia y la impunidad con que se manejaban los resultados electorales, la sociedad civil se organiza autónomamente para vigilar los comicios. Este movimiento precede y fuerza las reformas institucionales de 1993.","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":1988,"headline":"1988: la 'caída del sistema' — la crisis que hace inevitable una nueva institución","summary":"El 6 de julio de 1988, la misma noche de las elecciones presidenciales, el sistema de cómputo de la Comisión Federal Electoral colapsa. La 'caída del sistema' — nunca plenamente explicada — deja al país sin resultados confiables durante horas críticas. Tres candidatos (Cárdenas, ","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":1989,"headline":"Baja California 1989: la primera gubernatura de oposición en la historia","summary":"El 2 de julio de 1989, Ernesto Ruffo Appel del PAN gana la gubernatura de Baja California, convirtiéndose en el primer gobernador de oposición en la historia de México desde la fundación del PRI. El triunfo es reconocido por el gobierno federal — un acto sin precedente. Este hech","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1990,"headline":"Se crea el Instituto Federal Electoral (IFE)","summary":"El Código Federal de Instituciones y Procedimientos Electorales (COFIPE) crea el Instituto Federal Electoral con el objetivo de contar con una institución que dé certeza, transparencia y legalidad a las elecciones federales. Su Consejo General original estuvo presidido por el Sec","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1990,"headline":"COFIPE: Código Federal de Instituciones y Procedimientos Electorales","summary":"El Código Federal de Instituciones y Procedimientos Electorales (COFIPE) es la respuesta legislativa a la crisis de credibilidad de 1988. Representa la refundación legal del sistema electoral. Sus innovaciones centrales (fuente: libro S7, cap. 'La reforma de 1989-1990'):","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1990,"headline":"1990: el TRIFE — Tribunal Federal Electoral, el primer con poder real","summary":"El Código Federal de Instituciones y Procedimientos Electorales (COFIPE) crea el Tribunal Federal Electoral (TRIFE), que reemplaza al TRICOEL. A diferencia de su antecesor, el TRIFE tiene atribuciones sustancialmente mayores. (Fuente: libro S7, cap. 'La reforma de 1989-1990')","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1990,"headline":"1990: el Consejo General del IFE — primera vez con ciudadanos árbitros","summary":"El COFIPE crea el Consejo General del IFE con una composición inédita. Por primera vez en la historia aparece una figura ciudadana sin filiación partidista que actúa como árbitro: los consejeros magistrados. (Fuente: libro S7, cap. 'La reforma de 1989-1990')","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1990,"headline":"1990 — COFIPE: reintroduce el registro condicionado y estructura el financiamiento","summary":"El COFIPE reactiva el registro condicionado para nuevos partidos — suprimido en 1986 — y estructura por primera vez un sistema claro de financiamiento público con cuatro rubros:","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1990,"headline":"1990 — COFIPE: cuatro rubros estructurados de financiamiento público","summary":"El Código Federal de Instituciones y Procedimientos Electorales (COFIPE) estructura con mayor claridad el financiamiento público de los partidos en cuatro rubros:","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1990,"headline":"1990 — COFIPE: se ajusta la cláusula de gobernabilidad con tope de 350 diputados","summary":"El COFIPE mantiene el diseño de la Cámara de Diputados (300 uninominales + 200 plurinominales = 500 integrantes) pero modifica la cláusula de gobernabilidad con nuevas restricciones:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1990,"headline":"1990–1992: el Registro Federal de Electores — el padrón electoral construido desde cero","summary":"Con la creación del IFE en 1990, el COFIPE establece el Registro Federal de Electores (RFE) como una dirección especializada dentro del Instituto, con la encomienda de elaborar desde cero un padrón electoral confiable.","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1990,"headline":"1990: el IFE y el primer Servicio Profesional Electoral — la lealtad a la institución","summary":"El COFIPE crea el IFE con una innovación institucional fundamental: un servicio civil de carrera permanente cuya lealtad esté con la institución y no con ningún partido o gobierno.","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":1990,"headline":"1990: nace el IFE — certeza, transparencia y legalidad como objetivos fundacionales","summary":"El COFIPE crea el Instituto Federal Electoral con tres objetivos fundacionales explícitos: dar certeza, transparencia y legalidad a las elecciones federales. Es la respuesta institucional a la crisis de 1988.","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":1991,"headline":"El IFE organiza sus primeras elecciones federales","summary":"El 18 de agosto de 1991 se llevan a cabo las primeras elecciones de legisladores federales organizadas por el IFE. Fue la primera prueba institucional del nuevo órgano electoral. Según el libro S7 (historia de las reformas electorales), el IFE logró organizar el proceso con credi","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1991,"headline":"Guanajuato y San Luis Potosí 1991: conflictos postelectorales y 'concertacesiones'","summary":"Tras las elecciones estatales de 1991, Guanajuato y San Luis Potosí viven agudos conflictos postelectorales que el IFE no puede resolver directamente porque aún no tiene jurisdicción sobre elecciones locales. El gobierno federal interviene políticamente:","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1991,"headline":"1991: el IFE organiza sus primeras elecciones federales — la credibilidad comienza a recuperarse","summary":"El 18 de agosto de 1991 se celebran las primeras elecciones de diputados federales organizadas por el IFE. Es el primer examen institucional del nuevo organismo.","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":1992,"headline":"1992: la credencial de elector con fotografía — el documento de identidad de México","summary":"El Consejo General del IFE aprueba el nuevo diseño de la credencial de elector con fotografía. A partir de 1992 se inicia el proceso de 'credencialización' masiva — el recorrido por todo el territorio nacional para fotografiar y entregar la nueva credencial a cada ciudadano inscr","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1992,"headline":"1992: el Estatuto del Servicio Profesional Electoral — el primer paso de la profesionalización","summary":"La publicación del Estatuto del Servicio Profesional Electoral del IFE en 1992 representa, según el propio INE, 'el primer paso hacia la profesionalización de las y los servidores electorales del IFE'.","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":1993,"headline":"Reforma al COFIPE: nuevas atribuciones del IFE","summary":"La reforma al COFIPE amplía las atribuciones del IFE: asume la declaración de validez de elecciones de diputados y senadores (antes a cargo de los Colegios Electorales del Congreso); se establecen los primeros topes de gastos de campaña y normas de transparencia en el financiamie","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1993,"headline":"Reforma al COFIPE de 1993: financiamiento, senado plural y fin de los colegios electorales","summary":"La reforma al COFIPE de 1993, impulsada tras la escandalosa reunión de empresarios en casa de Ortiz Mena donde se recaudaron fondos millonarios para el PRI, introduce cambios estructurales (fuente: libro S7, cap. 'La reforma de 1993'):","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1993,"headline":"1993: el TRIFE asume la calificación de elecciones de diputados y senadores","summary":"La reforma al COFIPE de 1993 da un paso decisivo en la jurisdiccionalización del contencioso electoral: suprime los Colegios Electorales de las Cámaras de Diputados y Senadores para la calificación de sus propias elecciones. (Fuente: libro S7, cap. 'La reforma de 1993'; SCJN Expo","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1993,"headline":"1993: primera regulación del financiamiento privado de los partidos","summary":"La reforma al COFIPE de 1993 establece por primera vez reglas sobre el financiamiento privado de los partidos, detonada por el escándalo de la reunión en casa del exsecretario de Hacienda Antonio Ortiz Mena donde se recaudaron fondos millonarios para el PRI.","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1993,"headline":"1993: el escándalo de Ortiz Mena — el detonador de la primera fiscalización","summary":"En marzo de 1993, el exsecretario de Hacienda Antonio Ortiz Mena reúne en su casa a un grupo importante de empresarios y al presidente de la República para comprometer donaciones millonarias al PRI. La noticia la publica El Economista el 12 de marzo. Como documenta Woldenberg: 'L","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1993,"headline":"1993: los primeros topes de gasto de campaña y regulación de publicidad en medios","summary":"La reforma de 1993 va más allá del financiamiento ordinario e introduce los primeros mecanismos para regular el gasto durante las campañas y el acceso a los medios de comunicación:","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1993,"headline":"1993: el Senado se abre al pluralismo — 4 senadores por estado, fin de la cláusula de gobernabilidad","summary":"La reforma de 1993 introduce dos cambios estructurales de gran calado para ambas Cámaras:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1993,"headline":"1993: los observadores electorales — la sociedad civil vigilando sus propias elecciones","summary":"La reforma al COFIPE de 1993 reconoce legalmente la figura del observador electoral nacional, respondiendo a una demanda social organizada. Como documenta Woldenberg: 'no debe verse como una simple concesión. En los años previos una potente ola organizativa reclamó comicios limpi","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1993,"headline":"1993: observadores electorales, auditoría ciudadana y base legal del PREP","summary":"La reforma al COFIPE de 1993 introduce tres mecanismos de transparencia que transforman la relación entre ciudadanos e instituciones electorales:","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":1993,"headline":"1993: el IFE asume la calificación de elecciones de diputados y senadores","summary":"La reforma al COFIPE de 1993 amplía las atribuciones del IFE en un punto crucial: el Instituto asume la declaración de validez de las elecciones de diputados y senadores, función que antes correspondía a los Colegios Electorales del Congreso. El Tribunal Federal Electoral queda c","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":1994,"headline":"Consejeros ciudadanos: un paso hacia la autonomía","summary":"La reforma de 1994 sustituye la figura de los consejeros magistrados por los consejeros ciudadanos, personalidades propuestas por los grupos parlamentarios y electas por las dos terceras partes de la Cámara de Diputados. Además, se suprime el voto de los representantes de los par","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1994,"headline":"Reforma de 1994: consejeros ciudadanos y delitos electorales","summary":"Ante el levantamiento zapatista (1 de enero de 1994) y el asesinato de Luis Donaldo Colosio (23 de marzo), el secretario de Gobernación Jorge Carpizo convocó a todos los partidos a negociar nuevas reformas (fuente: libro S7, cap. 'Las reformas' y 'Acuerdos y más acuerdos'):","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1994,"headline":"Chiapas 1994: el levantamiento zapatista y la crisis de la democracia local","summary":"El 1 de enero de 1994, el EZLN se levanta en armas en Chiapas, tomando San Cristóbal, Ocosingo, Las Margaritas y Altamirano. El levantamiento pone en el centro del debate nacional las condiciones de marginación y falta de representación política de las comunidades indígenas, y ev","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1994,"headline":"1994: delitos electorales tipificados — nace la Fiscalía Especializada","summary":"En el marco de las reformas negociadas por Jorge Carpizo tras el levantamiento zapatista, se introduce al Código Penal el capítulo de delitos electorales y se crea la Fiscalía Especial para la Atención de Delitos Electorales (FEPADE). (Fuente: libro S7, cap. 'Las reformas')","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1994,"headline":"1994: los consejeros ciudadanos — propuestos por los partidos, no por el presidente","summary":"En el marco de las reformas negociadas por Jorge Carpizo — secretario de Gobernación — tras el levantamiento zapatista, la reforma constitucional de 1994 transforma de fondo la composición del Consejo General. (Fuente: libro S7, cap. 'Las reformas'; SCJN Exposición de Motivos 199","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1994,"headline":"1994: el informe de los consejeros ciudadanos — primera evidencia oficial de la inequidad","summary":"Las elecciones del 21 de agosto de 1994 son las primeras en que los partidos están obligados a rendir cuentas de sus gastos gracias a la reforma de 1993. El informe que presentan los consejeros ciudadanos del IFE al concluir la contienda es histórico: por primera vez desde la aut","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1994,"headline":"1994: los 'visitantes extranjeros' — México abre sus comicios al mundo","summary":"La reforma de 1994 aprueba, bajo el eufemismo de 'visitantes extranjeros', la primera apertura de México a la observación electoral internacional. Como señala Woldenberg: 'Durante varias décadas, México fue una fortaleza inexpugnable para los ojos del mundo'.","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1994,"headline":"1994: la cadena de candados — padrón auditado, boletas foliadas y líquido indeleble","summary":"Ante la presión de la crisis política de 1994 (levantamiento zapatista, asesinato de Colosio), el Consejo General del IFE aprueba una batería de medidas adicionales de transparencia para las elecciones del 21 de agosto. Woldenberg las describe como 'acuerdos y más acuerdos' que v","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":1994,"headline":"1994: consejeros ciudadanos — la reforma de urgencia que refuerza la imparcialidad","summary":"En el contexto del levantamiento zapatista y el asesinato del candidato presidencial Luis Donaldo Colosio, Jorge Carpizo — Secretario de Gobernación — negocia con todos los partidos una nueva reforma que refuerza la imparcialidad del IFE.","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":1995,"headline":"Tabasco y Yucatán 1995: conflictos estatales que paralizan la reforma nacional","summary":"En 1995 dos conflictos postelectorales estatales paralizan las negociaciones de la gran reforma electoral nacional:","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1996,"headline":"La Constitución otorga plena autonomía e independencia al IFE","summary":"La reforma constitucional del 22 de agosto de 1996 — resultado de un acuerdo histórico entre todos los partidos con representación en el Congreso y el Ejecutivo Federal (Ernesto Zedillo) — transforma radicalmente la naturaleza del IFE:","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1996,"headline":"Reforma constitucional de 1996: la más ambiciosa — el gran acuerdo","summary":"Firmada el 22 de agosto de 1996, esta reforma constitucional es considerada la más profunda de la transición democrática. Fue resultado de un acuerdo histórico entre el Ejecutivo (Ernesto Zedillo) y todos los partidos con representación congressional — PRI, PAN, PRD y PT (fuente:","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":1996,"headline":"Reforma de 1996: el TEPJF extiende su jurisdicción a las elecciones locales","summary":"La reforma constitucional del 22 de agosto de 1996 tiene un impacto crucial para los estados: el Tribunal Electoral del Poder Judicial de la Federación (TEPJF) adquiere jurisdicción sobre los conflictos electorales locales cuando haya violaciones directas a la Constitución. (Fuen","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1996,"headline":"1996: el TEPJF — Tribunal Electoral del Poder Judicial de la Federación","summary":"La reforma constitucional del 22 de agosto de 1996 es el parteaguas definitivo del contencioso electoral mexicano. Por primera vez existe un sistema integral de justicia electoral que elimina la autocalificación en su totalidad. (Fuente: Exposición de Motivos SCJN, 26 julio 1996;","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1996,"headline":"1996: Ley General del Sistema de Medios de Impugnación en Materia Electoral","summary":"Simultáneamente a la reforma constitucional, se aprueba la Ley General del Sistema de Medios de Impugnación en Materia Electoral (LGSMIME), que codifica en un solo ordenamiento todos los recursos y procedimientos de la justicia electoral. (Fuente: libro S7, cap. 'El contencioso e","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":1996,"headline":"1996: plena autonomía — sale Gobernación, entran los consejeros electorales","summary":"La reforma constitucional del 22 de agosto de 1996 es la transformación más profunda de la historia del Consejo General. Por primera vez en su historia, la autoridad electoral suprema es completamente independiente del Ejecutivo y del Legislativo. (Fuente: SCJN, Exposición de Mot","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1996,"headline":"1996: financiamiento público preponderante y la ansiada equidad competitiva","summary":"La reforma de 1996 es el parteaguas en las condiciones de la competencia entre partidos. Como señala Woldenberg, 'quizá sea esa dimensión la más relevante de aquella reforma, porque si bien en 1994 se habían contado con pulcritud los votos, las condiciones de la competencia había","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1996,"headline":"1996: el financiamiento público preponderante — el parteaguas del sistema","summary":"La reforma constitucional del 22 de agosto de 1996 eleva al rango constitucional el principio de que el financiamiento público prevalece sobre el privado. Es la transformación más profunda en materia de dinero y política en la historia de México. (Fuente primaria: Exposición de M","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1996,"headline":"1996: la arquitectura definitiva — tope del 8% en Diputados y 32 senadores plurinominales","summary":"La reforma constitucional del 22 de agosto de 1996 establece la arquitectura final del Congreso que llega hasta 2014 con ajustes menores. (Fuente primaria: Exposición de Motivos, Cámara de Diputados, 26 julio 1996, SCJN)","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":1996,"headline":"1996: el JDC — cualquier ciudadano puede defender sus derechos políticos ante el TEPJF","summary":"La reforma constitucional de 1996 introduce el Juicio para la Protección de los Derechos Político-Electorales del Ciudadano (JDC), el instrumento más poderoso de participación ciudadana individual en la historia electoral de México. (Fuente: Exposición de Motivos, Cámara de Diput","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":1996,"headline":"1996: monitoreo de medios obligatorio y procedimientos de transparencia en la Constitución","summary":"La reforma constitucional de 1996 eleva al rango legal varios mecanismos de transparencia e incorpora el monitoreo de medios como obligación del IFE:","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":1996,"headline":"1996: plena autonomía — el Secretario de Gobernación sale del IFE para siempre","summary":"La reforma constitucional del 22 de agosto de 1996 es el momento culminante de la historia del IFE: por primera vez en su historia, la autoridad electoral suprema es completamente independiente del Ejecutivo y del Legislativo. Es resultado de un acuerdo histórico entre el Ejecuti","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":1997,"headline":"Primera elección para Jefe de Gobierno del Distrito Federal","summary":"Gracias a la reforma constitucional de 1996, en 1997 se llevan a cabo las primeras elecciones para elegir al Jefe de Gobierno del Distrito Federal por voto directo. El IFE organiza el proceso, que culmina con el triunfo de Cuauhtémoc Cárdenas. Este hecho marcó también la primera ","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":1997,"headline":"1997: el DF elige por primera vez a su Jefe de Gobierno — y el mapa estatal cambia","summary":"Las elecciones del 6 de julio de 1997 son un parteaguas en la evolución electoral de los estados y la capital:","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":1997,"headline":"1997: el primer Consejo plenamente autónomo organiza elecciones históricas","summary":"El Consejo General del IFE reestructurado bajo la reforma de 1996 enfrenta su primera prueba electoral en las elecciones del 6 de julio de 1997 — las más competidas y equitativas de la historia moderna de México. (Fuente: libro S7, cap. 'Las elecciones de 1997. La ansiada equidad","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":1997,"headline":"1997: la consolidación del sistema tripartidista — ninguno con mayoría absoluta","summary":"Las elecciones del 6 de julio de 1997 marcan la consolidación de un sistema de tres partidos realmente competitivos. Por primera vez en la historia ningún partido obtiene mayoría absoluta en la Cámara de Diputados: PRI 239, PRD 125, PAN 121, PVEM 8, PT 7.","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":1997,"headline":"1997: los números cambian — la reforma produce equidad financiera medible","summary":"Las elecciones del 6 de julio de 1997 demuestran que la reforma de 1996 tuvo un impacto real y medible en la distribución del financiamiento entre partidos. Por primera vez en la historia, la contienda transcurre en condiciones financieras relativamente equitativas.","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":1997,"headline":"1997: la primera Cámara sin mayoría absoluta — el PRI pierde el control del Congreso","summary":"Las elecciones del 6 de julio de 1997 producen por primera vez en la historia moderna la Cámara de Diputados sin mayoría absoluta para ningún partido, y el Senado más plural hasta entonces:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":2000,"headline":"El IFE consolida la alternancia presidencial","summary":"El 2 de julio de 2000, el IFE organiza las elecciones en las que Vicente Fox Quesada, candidato del PAN, gana la presidencia, poniendo fin a más de 70 años de gobiernos del PRI. La actuación del IFE — reconocida nacional e internacionalmente — se convierte en referente de imparci","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":2000,"headline":"Año 2000: alternancia presidencial y el nuevo mapa político de los estados","summary":"Para el 2 de julio de 2000, el mapa político de los estados es irreconocible en comparación con 1977 (fuente: libro S7, cap. 'La alternancia'):","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":2000,"headline":"2000: el TEPJF supera su prueba de fuego — la alternancia presidencial","summary":"El 2 de julio de 2000 el TEPJF enfrenta su primera elección presidencial con plenas atribuciones. Vicente Fox gana con 42.52% frente al 36.10% de Francisco Labastida. A las 11 de la noche el Consejo General del IFE anuncia los resultados de los conteos rápidos y el presidente Ern","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":2000,"headline":"2000: el financiamiento equitativo hace posible la alternancia presidencial","summary":"Las elecciones del 2 de julio de 2000 son las primeras en la historia en que una coalición opositora parte a la competencia con más recursos públicos que el PRI. La fórmula de distribución del financiamiento establecida en 1996 produce este resultado inédito:","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":2000,"headline":"2000: la alternancia presidencial — por primera vez ambas Cámaras sin mayoría absoluta","summary":"Las elecciones del 2 de julio de 2000 consolidan el pluralismo legislativo. Por primera vez en la historia ningún partido tiene mayoría absoluta ni en la Cámara de Diputados ni en el Senado:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":2000,"headline":"2000: el PREP en su madurez — los resultados casilla por casilla visibles en todo el mundo","summary":"Las elecciones presidenciales del 2 de julio de 2000 son el examen más exigente del sistema de transparencia electoral construido entre 1990 y 1996. El IFE despliega una maquinaria de transparencia sin precedente en el mundo, que Woldenberg describe con detalle en su lista de 24 ","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":2000,"headline":"2000: el IFE organiza la alternancia presidencial — su mayor prueba y su mayor logro","summary":"El 2 de julio de 2000, el IFE organiza las elecciones en las que Vicente Fox derrota al PRI después de 71 años de gobiernos del partido tricolor. Es la prueba definitiva de la autonomía y la confiabilidad institucional del organismo.","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":2005,"headline":"2005: voto de mexicanos en el exterior — la diáspora también vota","summary":"Se establecen los lineamientos para que los mexicanos residentes en el extranjero puedan votar en las elecciones presidenciales. Este mecanismo — que incluye el voto postal y la elaboración de listas nominales de electores residentes en el exterior — extiende la participación pol","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":2005,"headline":"2005: el voto de los mexicanos en el exterior — la diáspora participa en las elecciones","summary":"El Congreso aprueba la reforma legal que permite por primera vez a los mexicanos residentes en el extranjero ejercer su derecho al voto en las elecciones presidenciales, sin necesidad de regresar al país.","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":2007,"headline":"53 nuevas atribuciones al IFE: acceso a medios y fiscalización","summary":"La reforma electoral de 2007–2008 al COFIPE otorgó al IFE 53 atribuciones adicionales con dos grandes objetivos: 1) controlar el acceso de los partidos a radio y televisión, eliminando la compra directa de publicidad política; 2) fortalecer la fiscalización del financiamiento de ","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":2007,"headline":"Reforma electoral 2007–2008: control de medios y prohibición de publicidad privada","summary":"La reforma al COFIPE de 2007–2008 modifica radicalmente la relación entre dinero, medios y política:","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":2007,"headline":"Reforma 2007–2008: el TEPJF sanciona infracciones en medios de comunicación","summary":"La reforma electoral de 2007–2008 amplía sustancialmente las atribuciones del TEPJF en materia de contencioso electoral:","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":2007,"headline":"2007–2008: el Consejo General asume 53 nuevas atribuciones sobre medios","summary":"La reforma electoral de 2007–2008 amplía sustancialmente las atribuciones del Consejo General del IFE, convirtiéndolo en el administrador de los tiempos del Estado en radio y televisión durante los procesos electorales.","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":2007,"headline":"2007–2008: los partidos ya no pueden comprar publicidad directamente en medios","summary":"La reforma electoral de 2007–2008 transforma radicalmente la relación entre los partidos y los medios de comunicación:","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":2007,"headline":"2007–2008: la prohibición de compra directa de publicidad en radio y televisión","summary":"La reforma electoral de 2007–2008 representa el cambio más radical en el modelo de financiamiento de campañas desde 1996. Su eje central: los partidos ya no pueden comprar publicidad directamente en radio y televisión.","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":2007,"headline":"2007–2008: monitoreo de propaganda y procedimiento sancionador expedito","summary":"La reforma electoral de 2007–2008 amplía los instrumentos de transparencia y fiscalización del proceso, respondiendo a las controversias de las elecciones presidenciales de 2006:","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":2007,"headline":"2007–2008: 53 nuevas atribuciones — el IFE se convierte en administrador de tiempos en medios","summary":"Tras las controvertidas elecciones presidenciales de 2006 — con una diferencia de 0.56% entre el primero y el segundo lugar, calificadas por el TEPJF y con meses de impugnaciones — la reforma de 2007-2008 amplía radicalmente las atribuciones del IFE.","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":2011,"headline":"Postura electoral a favor de la equidad de género","summary":"El Tribunal Electoral del Poder Judicial de la Federación (TEPJF) resolvió a favor de la equidad de género en la integración de candidaturas. Las fórmulas de candidatos debían integrarse por propietario y suplente del mismo género para garantizar la cuota del 60/40%. Esta resoluc","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":2011,"headline":"2011: el TEPJF resuelve en favor de la equidad de género","summary":"El Tribunal Electoral del Poder Judicial de la Federación emite una resolución histórica al conocer juicios para la protección de los derechos político-electorales del ciudadano (JDC) interpuestos por candidatas que habían sido sustituidas por hombres en las fórmulas de candidatu","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":2011,"headline":"2011: el Consejo General impulsa la equidad de género en las candidaturas","summary":"El Consejo General del IFE juega un papel activo en la aplicación de la cuota de género del 40% en candidaturas a diputaciones federales. Al resolver las impugnaciones presentadas por candidatas desplazadas, el Tribunal Electoral del Poder Judicial de la Federación (TEPJF) da la ","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":2011,"headline":"2011: el TEPJF exige la cuota de género efectiva en ambas Cámaras","summary":"El Tribunal Electoral del Poder Judicial de la Federación (TEPJF) emite una resolución que obliga a los partidos a cumplir efectivamente la cuota de género del 40% en candidaturas a diputaciones y senadurías federales — no solo formalmente.","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":2011,"headline":"2011: el TEPJF garantiza la cuota de género — las mujeres defienden su derecho a ser votadas","summary":"Ciudadanas que habían sido postuladas como candidatas propietarias a diputaciones federales y posteriormente sustituidas por hombres, interponen Juicios para la Protección de los Derechos Político-Electorales del Ciudadano (JDC) ante el Tribunal Electoral del Poder Judicial de la","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":2012,"headline":"Reforma de 2012: candidaturas independientes e iniciativa ciudadana de ley","summary":"Se publican las reformas constitucionales que introducen dos mecanismos inéditos de participación directa:","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":2012,"headline":"2012: candidaturas independientes — la competencia se abre a los ciudadanos","summary":"La reforma constitucional de 2012 introduce las candidaturas independientes: por primera vez en la historia moderna de México, un ciudadano puede postularse a cargos de elección popular sin necesidad de contar con el aval de un partido político, siempre que cumpla con requisitos ","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":2012,"headline":"2012: candidaturas independientes e iniciativa ciudadana — la participación directa","summary":"La reforma constitucional de 2012 introduce dos mecanismos inéditos de participación ciudadana directa que rompen el monopolio de los partidos sobre la vida política:","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":2012,"headline":"2012: el contexto previo a la gran transformación — candidaturas independientes y nueva agenda","summary":"La reforma constitucional de 2012 abre la agenda que culminará en la creación del INE en 2014. Introduce dos cambios que el IFE aún no tiene mandato para administrar plenamente:","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":2014,"headline":"El IFE evoluciona a INE: autoridad electoral de carácter nacional","summary":"Con la reforma político-electoral de 2014, el IFE se transforma en el Instituto Nacional Electoral (INE) para convertirse en autoridad de carácter nacional. Sus principales innovaciones:","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":2014,"headline":"Nueva integración del Consejo General: 11 consejeros ciudadanos","summary":"La reforma de 2014 establece que el Consejo General del INE se compone de 11 ciudadanos elegidos por la Cámara de Diputados. Uno funge como Consejero Presidente y los 10 restantes como Consejeros Electorales. Su designación requiere las dos terceras partes de la Cámara. Los parti","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":2014,"headline":"Servicio Profesional Electoral Nacional (SPEN)","summary":"Para asegurar imparcialidad y profesionalismo en todos los funcionarios que participan en la organización de elecciones —tanto a nivel federal como local— se crea el Servicio Profesional Electoral Nacional (SPEN), que extiende los estándares de carrera del IFE a los Organismos Pú","topic":"Autoridades e Instituciones Electorales","icon":"🏛️","color":"#1A3A5C"},{"year":2014,"headline":"Reforma político-electoral de 2014: nuevo marco legal para el INE","summary":"La reforma de 2014 no solo transforma el IFE en INE — también rediseña completamente el marco legal electoral con dos nuevas leyes que reemplazan al COFIPE:","topic":"Marcos Legales y Reforma Constitucional","icon":"📜","color":"#2E4057"},{"year":2014,"headline":"Reforma 2014: los OPLE y la homologación nacional del sistema electoral","summary":"La reforma político-electoral de 2014 es la transformación más profunda del sistema electoral local desde 1946. Sus elementos para los estados:","topic":"Evolución Electoral en los Estados","icon":"🗺️","color":"#1B4332"},{"year":2014,"headline":"Reforma 2014: nuevo sistema de medios de impugnación para el INE y los OPLE","summary":"La reforma político-electoral de 2014 actualiza el sistema de justicia electoral para adaptarlo a la nueva arquitectura institucional con el INE y los Organismos Públicos Locales Electorales (OPLE):","topic":"Contencioso Electoral y Medios de Impugnación","icon":"⚖️","color":"#4A1942"},{"year":2014,"headline":"2014: el Consejo General del INE — 11 consejeros ciudadanos, autoridad nacional","summary":"La reforma político-electoral de 2014 transforma el IFE en el Instituto Nacional Electoral (INE) y rediseña la composición y atribuciones del Consejo General para convertirlo en la máxima autoridad electoral de alcance nacional — federal y local. (Fuente: Excel original INE)","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":2014,"headline":"2014: el Servicio Profesional Electoral Nacional — apoyo técnico al Consejo","summary":"La reforma de 2014 crea el Servicio Profesional Electoral Nacional (SPEN) como el cuerpo técnico permanente que da sustento operativo al Consejo General del INE y a los Consejos Locales de los OPLE en todo el país.","topic":"Consejo General: Composición y Autonomía","icon":"🏛️","color":"#1C3F60"},{"year":2014,"headline":"2014: la Ley General de Partidos Políticos — primera ley específica en la historia","summary":"La reforma de 2014 crea por primera vez en la historia de México una Ley General de Partidos Políticos (LGPP), separada del código electoral general. Sus innovaciones:","topic":"Partidos Políticos y Competencia Electoral","icon":"🗳️","color":"#6B2737"},{"year":2014,"headline":"2014: fiscalización en tiempo real — el cierre del ciclo","summary":"La reforma político-electoral de 2014 cierra el ciclo que comenzó en 1993 con la primera obligación de rendir cuentas. Introduce la fiscalización en tiempo real como principio constitucional:","topic":"Financiamiento y Fiscalización de Partidos","icon":"💰","color":"#264653"},{"year":2014,"headline":"2014: paridad de género constitucional en la integración del Congreso","summary":"La reforma político-electoral de 2014 eleva la paridad de género al rango constitucional y establece nuevas reglas para la integración de ambas Cámaras:","topic":"Conformación de Cámaras: Diputados y Senadores","icon":"🏛️","color":"#2D4739"},{"year":2014,"headline":"2014: la paridad de género constitucional — del 60/40 al 50/50 obligatorio","summary":"La reforma político-electoral de 2014 eleva la paridad de género al rango constitucional, transformando una cuota del 60/40 en una obligación de paridad estricta (50/50) en todas las candidaturas a cargos de elección popular federales y locales.","topic":"Participación Ciudadana y Derechos Políticos","icon":"🗳️","color":"#7B3F00"},{"year":2014,"headline":"2014: el Servicio Profesional Electoral Nacional (SPEN) — la profesionalización llega a todo el país","summary":"La reforma político-electoral de 2014 crea el Servicio Profesional Electoral Nacional (SPEN), extendiendo a todo el sistema electoral del país los estándares de profesionalismo e imparcialidad que el IFE había construido para el nivel federal desde 1990.","topic":"Transparencia, Observación y Profesionalización","icon":"🔍","color":"#0D3B66"},{"year":2014,"headline":"2014: el IFE evoluciona a INE — la transformación más profunda desde la fundación de 1990","summary":"La reforma político-electoral del 10 de febrero de 2014 — publicada en el DOF ese día — transforma al IFE en el Instituto Nacional Electoral (INE). Es la reforma institucional más profunda al sistema electoral desde 1990.","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":2014,"headline":"2014: el nuevo Consejo General del INE — 11 ciudadanos elegidos por proceso técnico","summary":"La reforma de 2014 rediseña el proceso de designación del Consejo General para hacerlo más riguroso e independiente de los acuerdos coyunturales entre los partidos.","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":2014,"headline":"2014: el SPEN y las nuevas funciones del INE — el cierre de un ciclo histórico","summary":"La reforma de 2014 encomienda al INE nuevas funciones que cierran el ciclo de transformación iniciado en 1990:","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"},{"year":2014,"headline":"El balance: de la transición democrática al sistema electoral consolidado","summary":"Con la creación del INE en 2014, México cuenta con un sistema electoral que es producto de casi cuatro décadas de transformaciones graduales, conflictos políticos y acuerdos negociados. Como señala Woldenberg en la presentación de su Historia mínima de la transición democrática e","topic":"IFE → INE: La Gran Transformación","icon":"⭐","color":"#1A1A2E"}];
+
+// ── TOPIC CONFIG ──
+const TOPICS = [
+  { key:'Autoridades e Instituciones Electorales',         short:'Autoridades',      color:'#3A6B9F', bg:'rgba(58,107,159,0.15)' },
+  { key:'Marcos Legales y Reforma Constitucional',         short:'Marcos Legales',   color:'#6B8FAF', bg:'rgba(107,143,175,0.15)' },
+  { key:'Evolución Electoral en los Estados',              short:'Estados',           color:'#3A8C68', bg:'rgba(58,140,104,0.15)' },
+  { key:'Contencioso Electoral y Medios de Impugnación',   short:'Contencioso',       color:'#9B5EA8', bg:'rgba(155,94,168,0.15)' },
+  { key:'Consejo General: Composición y Autonomía',        short:'Consejo General',   color:'#4A88C8', bg:'rgba(74,136,200,0.15)' },
+  { key:'Partidos Políticos y Competencia Electoral',      short:'Partidos',          color:'#C05070', bg:'rgba(192,80,112,0.15)' },
+  { key:'Financiamiento y Fiscalización de Partidos',      short:'Financiamiento',    color:'#4A9090', bg:'rgba(74,144,144,0.15)' },
+  { key:'Conformación de Cámaras: Diputados y Senadores',  short:'Cámaras',           color:'#5A9070', bg:'rgba(90,144,112,0.15)' },
+  { key:'Participación Ciudadana y Derechos Políticos',    short:'Participación',     color:'#C07830', bg:'rgba(192,120,48,0.15)' },
+  { key:'Transparencia, Observación y Profesionalización', short:'Transparencia',     color:'#3A78B8', bg:'rgba(58,120,184,0.15)' },
+  { key:'IFE → INE: La Gran Transformación',               short:'IFE→INE',           color:'#8888CC', bg:'rgba(136,136,204,0.15)' },
+];
+
+const topicMap = {};
+TOPICS.forEach(t => topicMap[t.key] = t);
+
+function getTopicColor(key) {
+  return topicMap[key] ? topicMap[key].color : '#888';
+}
+function getTopicBg(key) {
+  return topicMap[key] ? topicMap[key].bg : 'rgba(128,128,128,0.15)';
+}
+function getTopicShort(key) {
+  return topicMap[key] ? topicMap[key].short : key;
+}
+
+// ── STATE ──
+let currentView = 'timeline';
+let activeTopics = new Set(); // empty = all
+let searchQuery = '';
+let filteredEvents = [...EVENTS];
+
+// ── FILTER LOGIC ──
+function applyFilters() {
+  filteredEvents = EVENTS.filter(ev => {
+    const matchTopic = activeTopics.size === 0 || activeTopics.has(ev.topic);
+    const q = searchQuery.toLowerCase();
+    const matchSearch = !q || 
+      ev.headline.toLowerCase().includes(q) ||
+      ev.summary.toLowerCase().includes(q) ||
+      ev.topic.toLowerCase().includes(q) ||
+      String(ev.year).includes(q);
+    return matchTopic && matchSearch;
+  });
+  document.getElementById('count-badge').textContent = 
+    filteredEvents.length === EVENTS.length
+      ? `${EVENTS.length} eventos`
+      : `${filteredEvents.length} de ${EVENTS.length} eventos`;
+  render();
+}
+
+// ── RENDER FILTERS ──
+function renderFilters() {
+  const wrap = document.getElementById('filters');
+  wrap.innerHTML = '';
+  // All
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn all-btn' + (activeTopics.size===0?' active':'');
+  allBtn.style.cssText = `color:${activeTopics.size===0?'#0C0F1A':''}`;
+  allBtn.innerHTML = `<span class="dot" style="background:var(--gold)"></span> Todos`;
+  allBtn.onclick = () => { activeTopics.clear(); renderFilters(); applyFilters(); };
+  wrap.appendChild(allBtn);
+
+  TOPICS.forEach(t => {
+    const active = activeTopics.has(t.key);
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (active?' active':'');
+    if(active) {
+      btn.style.background = t.color;
+      btn.style.color = '#0C0F1A';
+    }
+    btn.innerHTML = `<span class="dot" style="background:${t.color}"></span> ${t.short}`;
+    btn.onclick = () => {
+      if(activeTopics.has(t.key)) activeTopics.delete(t.key);
+      else activeTopics.add(t.key);
+      renderFilters(); applyFilters();
+    };
+    wrap.appendChild(btn);
+  });
+}
+
+// ── RENDER TIMELINE ──
+function renderTimeline() {
+  const wrap = document.getElementById('timeline-view');
+  if(!filteredEvents.length) { wrap.innerHTML = emptyState(); return; }
+
+  const byDecade = {};
+  filteredEvents.forEach(ev => {
+    const dec = Math.floor(ev.year/10)*10;
+    if(!byDecade[dec]) byDecade[dec] = [];
+    byDecade[dec].push(ev);
+  });
+
+  let html = '';
+  Object.keys(byDecade).sort((a,b)=>a-b).forEach(dec => {
+    const evs = byDecade[dec];
+    html += `<div class="decade-section">
+      <div class="decade-header">
+        <div class="decade-num">${dec}s</div>
+        <div class="decade-line"></div>
+        <div class="decade-count">${evs.length} cambio${evs.length>1?'s':''}</div>
+      </div>
+      <div class="tl-items">`;
+    evs.forEach((ev, i) => {
+      const col = getTopicColor(ev.topic);
+      const short = getTopicShort(ev.topic);
+      const delay = Math.min(i*0.04, 0.4);
+      html += `
+      <div class="tl-item" style="animation-delay:${delay}s">
+        <div class="tl-year-col">
+          <div class="tl-year">${ev.year}</div>
+          <div class="tl-dot" style="color:${col}"></div>
+          ${i<evs.length-1?'<div class="tl-line"></div>':''}
+        </div>
+        <div class="tl-card" style="color:${col}" onclick="openModal(${EVENTS.indexOf(ev)})">
+          <div class="tl-card-top">
+            <div class="tl-headline">${escHtml(ev.headline)}</div>
+            <div class="tl-topic-tag"><span>${escHtml(short)}</span></div>
+          </div>
+          ${ev.summary ? `<div class="tl-summary">${escHtml(ev.summary.substring(0,200))}</div>` : ''}
+        </div>
+      </div>`;
+    });
+    html += '</div></div>';
+  });
+  wrap.innerHTML = html;
+}
+
+// ── RENDER GRID ──
+function renderGrid() {
+  const wrap = document.getElementById('grid-view');
+  if(!filteredEvents.length) { wrap.innerHTML = emptyState(); return; }
+  let html = '<div class="grid-container">';
+  filteredEvents.forEach((ev, i) => {
+    const col = getTopicColor(ev.topic);
+    const short = getTopicShort(ev.topic);
+    const delay = Math.min(i*0.025, 0.5);
+    html += `
+    <div class="grid-card" style="color:${col};animation-delay:${delay}s" onclick="openModal(${EVENTS.indexOf(ev)})">
+      <div class="gc-year">${ev.year}</div>
+      <div class="gc-headline">${escHtml(ev.headline)}</div>
+      <div class="gc-topic"><span class="gc-dot"></span>${escHtml(short)}</div>
+      ${ev.summary ? `<div class="gc-summary">${escHtml(ev.summary.substring(0,200))}</div>` : ''}
+    </div>`;
+  });
+  html += '</div>';
+  wrap.innerHTML = html;
+}
+
+function emptyState() {
+  return `<div class="empty">
+    <div class="empty-icon">🔎</div>
+    <h3>Sin resultados</h3>
+    <p>Intenta con otro término de búsqueda o cambia los filtros.</p>
+  </div>`;
+}
+
+function render() {
+  if(currentView==='timeline') {
+    document.getElementById('timeline-view').style.display='block';
+    document.getElementById('grid-view').style.display='none';
+    renderTimeline();
+  } else {
+    document.getElementById('timeline-view').style.display='none';
+    document.getElementById('grid-view').style.display='block';
+    renderGrid();
+  }
+}
+
+// ── VIEW SWITCH ──
+function setView(v) {
+  currentView = v;
+  document.getElementById('btn-timeline').classList.toggle('active', v==='timeline');
+  document.getElementById('btn-grid').classList.toggle('active', v==='grid');
+  render();
+}
+
+// ── MODAL ──
+function openModal(idx) {
+  const ev = EVENTS[idx];
+  const col = getTopicColor(ev.topic);
+  const bg = getTopicBg(ev.topic);
+  const overlay = document.getElementById('modal-overlay');
+  document.getElementById('modal-year').textContent = ev.year;
+  const tag = document.getElementById('modal-topic');
+  tag.textContent = ev.topic;
+  tag.style.background = bg;
+  tag.style.color = col;
+  tag.style.border = `1px solid ${col}40`;
+  document.getElementById('modal-headline').textContent = ev.headline;
+  document.getElementById('modal-text').textContent = ev.summary;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(e) {
+  if(e.target===document.getElementById('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModalDirect(); });
+
+// ── SEARCH ──
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value;
+  applyFilters();
+});
+
+// ── ESCAPE HTML ──
+function escHtml(s) {
+  if(!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── INIT ──
+renderFilters();
+applyFilters();
+</script>
+</body>
+</html>
